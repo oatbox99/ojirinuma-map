@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大尻沼 一枚攻略図(2026・実証版)</title>
+<meta name="description" content="大尻沼(群馬県片品村・標高約1,408m)のルアー・フライ ボート釣り攻略図。公式規則・OSM実測地形・釣行記の採掘だけで組んだ出典明示型。隔年営業の判定パネル・2026年シーズン帯・ポイント推定配置つき。">
+</head>
+<body>
+<style>
+  :root{
+    --bg:#f4f2e9; --panel:#ece9d9; --panel2:#e6e2cf;
+    --ink:#26281f; --ink2:#555140; --muted:#665f49;
+    --gold:#9c7a1a; --gold-strong:#856712;
+    --line:#d5cfb2; --hair:#ccc4a6;
+    --water0:#c9e4e0; --water1:#7fb8bd; --water2:#3d7f92;
+    --shore:#2f6e84;
+    --series:#20708f; --warn:#ad721e;
+    --est:#a1661b; --est-bg:rgba(173,114,30,.10);
+    --ok:#477a45; --ng:#9c4433; --ng-bg:rgba(156,68,51,.08);
+    --halo:#f4f2e9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a1b22; --panel:#0f2530; --panel2:#0d212b;
+      --ink:#e6e3d3; --ink2:#b1ab96; --muted:#8b95a1;
+      --gold:#d2ab34; --gold-strong:#e1bf59;
+      --line:#1c3441; --hair:#213a47;
+      --water0:#123039; --water1:#1a4550; --water2:#276374;
+      --shore:#66a8b8;
+      --series:#4396b8; --warn:#b98220;
+      --est:#c78e2d; --est-bg:rgba(185,130,32,.14);
+      --ok:#6da166; --ng:#c06a55; --ng-bg:rgba(192,106,85,.12);
+      --halo:#0a1b22;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a1b22; --panel:#0f2530; --panel2:#0d212b;
+    --ink:#e6e3d3; --ink2:#b1ab96; --muted:#8b95a1;
+    --gold:#d2ab34; --gold-strong:#e1bf59;
+    --line:#1c3441; --hair:#213a47;
+    --water0:#123039; --water1:#1a4550; --water2:#276374;
+    --shore:#66a8b8;
+    --series:#4396b8; --warn:#b98220;
+    --est:#c78e2d; --est-bg:rgba(185,130,32,.14);
+    --ok:#6da166; --ng:#c06a55; --ng-bg:rgba(192,106,85,.12);
+    --halo:#0a1b22;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
+    font-size:13.5px; line-height:1.7; margin:0; padding:28px 18px 60px;
+  }
+  .sheet{max-width:1280px; margin:0 auto}
+  .mincho{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif}
+  h1,h2,h3{margin:0; font-weight:600}
+  .num{font-variant-numeric:tabular-nums}
+
+  header{border-bottom:2px solid var(--gold); padding-bottom:14px; margin-bottom:18px}
+  .eyebrow{color:var(--gold); letter-spacing:.35em; text-transform:uppercase; font-size:11px; margin-bottom:6px}
+  h1{font-size:34px; letter-spacing:.06em; text-wrap:balance}
+  h1 .pref{font-size:18px; color:var(--ink2); letter-spacing:.12em}
+  @media (max-width:600px){ h1 .pref{display:block; font-size:15px; margin-top:4px} }
+  .subtitle{color:var(--ink2); margin-top:6px; max-width:66em}
+  .headmeta{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; align-items:center}
+  .chip{display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); border-radius:999px; padding:2px 12px; font-size:12.5px; color:var(--ink2); background:var(--panel)}
+  .chip b{color:var(--ink); font-weight:600}
+  .lakenav{display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:14px}
+  .ln-label{font-size:12.5px; font-weight:700; color:var(--gold-strong); letter-spacing:.14em}
+  .ln-tabs{display:inline-flex; flex-wrap:wrap; border:1.5px solid var(--gold); border-radius:8px; overflow:hidden; background:var(--panel)}
+  .ln-tab{display:inline-flex; align-items:center; padding:7px 18px; font-size:14px; font-weight:700; letter-spacing:.08em}
+  .ln-tab + .ln-tab{border-left:1.5px solid var(--gold)}
+  a.ln-tab{color:var(--gold-strong); text-decoration:underline; text-underline-offset:3px}
+  a.ln-tab:hover{background:var(--gold); color:var(--bg)}
+  a.ln-tab:focus-visible{outline:2px solid var(--gold-strong); outline-offset:-2px}
+  .ln-on{background:var(--gold); color:var(--bg); cursor:default}
+  .ln-now{font-size:10px; font-weight:600; border:1px solid currentColor; border-radius:3px; padding:0 5px; margin-left:7px; letter-spacing:.08em}
+  @media (max-width:600px){
+    .ln-tabs{border:none; background:none; overflow:visible; gap:6px}
+    .ln-tab, .ln-tab + .ln-tab{border:1.5px solid var(--gold); border-radius:8px; background:var(--panel); padding:6px 12px; font-size:13px}
+    .ln-tabs .ln-tab.ln-on{background:var(--gold); color:var(--bg)}
+  }
+  .legend3{display:flex; flex-wrap:wrap; gap:14px; margin-top:12px; font-size:12.5px; color:var(--ink2)}
+  .lg{display:inline-flex; align-items:center; gap:7px}
+  .dot-solid{width:12px;height:12px;border-radius:50%;background:var(--gold);flex:none}
+  .dot-dash{width:12px;height:12px;border-radius:50%;border:2px dashed var(--est);background:var(--est-bg);flex:none}
+  .dot-open{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--muted);flex:none}
+
+  .maingrid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap:18px; align-items:start; margin-top:16px}
+  @media (max-width:1080px){ .maingrid{grid-template-columns:1fr 1fr} }
+  @media (max-width:680px){ .maingrid{grid-template-columns:1fr} }
+
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:14px 16px; margin-bottom:14px}
+  .card h3{font-size:14.5px; letter-spacing:.08em; display:flex; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap}
+  .tag{font-size:11.5px; letter-spacing:.06em; border-radius:3px; padding:1px 7px; font-weight:600; flex:none}
+  .tag-fix{background:var(--gold); color:var(--bg)}
+  .tag-obs{background:var(--series); color:var(--bg)}
+  .tag-est{border:1px dashed var(--est); color:var(--est); background:var(--est-bg)}
+  .tag-gen{border:1px solid var(--muted); color:var(--muted)}
+  .card ul{margin:0; padding-left:1.2em}
+  .card li{margin:3px 0}
+  .card .src{color:var(--muted); font-size:12px}
+  .kv{width:100%; border-collapse:collapse}
+  .kv td{padding:3px 0; vertical-align:top; border-bottom:1px solid var(--hair)}
+  .kv tr:last-child td{border-bottom:none}
+  .kv td:first-child{color:var(--ink2); width:7.5em; padding-right:8px}
+  .warnnote{color:var(--est); font-size:12.5px}
+  .oknote{color:var(--ok)}
+  .ngnote{color:var(--ng)}
+
+  .mapcard{background:var(--panel2); border:1px solid var(--line); border-radius:6px; padding:10px 14px 8px; margin-top:16px}
+  .mapcard h2{font-size:16.5px; letter-spacing:.1em; margin:4px 4px 2px}
+  .mapcard .mapsub{color:var(--ink2); font-size:12.5px; margin:0 4px 6px}
+  svg{display:block; width:100%; height:auto}
+  svg text{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif}
+  .maplegend{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:12px; color:var(--ink2); margin:0 4px 8px; align-items:center}
+  .ml-hot{width:14px; height:14px; border-radius:50%; background:var(--gold); box-shadow:0 0 5px var(--gold); flex:none}
+  .ml-dim{width:13px; height:13px; border-radius:50%; border:1.6px dashed var(--est); background:var(--est-bg); opacity:.3; flex:none}
+  .ml-ng{width:16px; height:8px; background:var(--ng); opacity:.35; flex:none}
+  .ml-zone{width:20px; height:0; border-top:4px dashed var(--est); flex:none}
+  .ml-sq{width:12px; height:12px; background:var(--gold); flex:none}
+  .ml-sqd{width:12px; height:12px; border:1.5px dashed var(--est); background:var(--est-bg); flex:none}
+  .pointlist{display:grid; grid-template-columns:1fr 1fr; gap:2px 18px; margin-top:10px; font-size:12.5px}
+  @media (max-width:680px){ .pointlist{grid-template-columns:1fr} }
+  .pt{display:flex; gap:8px; padding:5px 2px; border-bottom:1px solid var(--hair); align-items:baseline}
+  .pt:nth-last-child(-n+2){border-bottom:none}
+  .ptn{flex:none; width:21px; height:21px; border-radius:50%; border:1.6px dashed var(--est); color:var(--est); background:var(--est-bg); display:inline-flex; align-items:center; justify-content:center; font-size:11.5px; font-weight:700; transform:translateY(3px)}
+  .pt b{color:var(--ink)}
+  .pt .d{color:var(--ink2)}
+  .pt .s{color:var(--muted); font-size:12px}
+  #lakemap g.dim{opacity:.25}
+  #lakemap g.hot circle{fill:var(--gold); stroke:var(--halo); stroke-width:2; stroke-dasharray:none; filter:drop-shadow(0 0 5px var(--gold))}
+  #lakemap g.hot text.pn{fill:var(--bg)}
+  #lakemap g.hot text.pl{fill:var(--gold-strong); font-weight:700}
+  #lakemap path.zone{fill:none; stroke:var(--est); stroke-width:6; stroke-dasharray:10 7; stroke-linecap:round; opacity:.8}
+  #lakemap g.hot path.zone{stroke:var(--gold); stroke-width:8; opacity:1}
+
+  .band{background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:14px 18px; margin-top:16px}
+  .band h2{font-size:16.5px; letter-spacing:.1em; display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap}
+  .cols3{display:grid; grid-template-columns:repeat(3,1fr); gap:8px 22px}
+  .cols2{display:grid; grid-template-columns:repeat(2,1fr); gap:8px 22px}
+  @media (max-width:900px){ .cols3{grid-template-columns:1fr} .cols2{grid-template-columns:1fr} }
+  .step{display:flex; gap:10px; margin:6px 0}
+  .stepn{flex:none; width:22px; height:22px; border-radius:50%; background:var(--gold); color:var(--bg); font-weight:700; display:flex; align-items:center; justify-content:center; font-size:12px; transform:translateY(2px)}
+  .unk{display:flex; flex-wrap:wrap; gap:8px}
+  .unk span{border:1px dashed var(--muted); border-radius:999px; padding:2px 12px; font-size:12.5px; color:var(--ink2)}
+  .bigtable{width:100%; border-collapse:collapse}
+  .bigtable th{color:var(--muted); font-size:12px; text-align:left; font-weight:600; padding:3px 10px 3px 0; border-bottom:1px solid var(--line)}
+  .bigtable td{padding:3px 10px 3px 0; border-bottom:1px solid var(--hair); vertical-align:top}
+  footer{margin-top:22px; color:var(--muted); font-size:12px; border-top:1px solid var(--line); padding-top:12px}
+  footer a{color:var(--gold)}
+  .honest{background:var(--est-bg); border:1px dashed var(--est); border-radius:6px; padding:12px 16px; margin-top:16px; font-size:13px}
+  .honest b{color:var(--est)}
+
+  .hero{background:var(--panel); border:1.5px solid var(--gold); border-radius:8px; padding:18px 20px 14px; margin-bottom:0}
+  .hero h2{font-size:21px; letter-spacing:.08em; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+  .hero .today{color:var(--gold); font-size:13.5px}
+  .openbadge{display:inline-flex; align-items:center; gap:8px; border-radius:6px; padding:6px 14px; font-size:14.5px; font-weight:700; margin-top:12px}
+  .openbadge.is-open{background:var(--ok); color:var(--bg)}
+  .openbadge.is-closed{background:var(--ng-bg); color:var(--ng); border:1.5px dashed var(--ng)}
+  .openbadge.is-unknown{background:var(--est-bg); color:var(--est); border:1.5px dashed var(--est)}
+  .nextopen{font-size:13px; color:var(--ink2); margin-top:6px}
+  .nextopen b{color:var(--gold-strong)}
+  .selrow{display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 2px; align-items:center}
+  .selrow .sl,.windrow .sl{color:var(--muted); font-size:12px; letter-spacing:.12em; margin-right:4px; flex:none}
+  .pbtn{border:1px solid var(--line); background:var(--panel2); color:var(--ink2); border-radius:999px; padding:4px 13px; font-size:13px; cursor:pointer; font-family:inherit; line-height:1.5}
+  .pbtn:hover{border-color:var(--gold)}
+  .pbtn:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+  .pbtn.on{background:var(--gold); color:var(--bg); border-color:var(--gold); font-weight:700}
+  .binnote{color:var(--muted); font-size:12px; margin:4px 0 0}
+  .yearnote{color:var(--est); font-size:12.5px; font-weight:600; margin:6px 0 0}
+  .verdict{display:grid; grid-template-columns:230px 1fr 1.2fr; gap:14px 24px; margin-top:14px}
+  @media (max-width:900px){ .verdict{grid-template-columns:1fr} }
+  .vcell h4{margin:0 0 6px; font-size:12px; letter-spacing:.16em; color:var(--muted); font-weight:600}
+  .tanabig{font-size:26px; font-weight:700; color:var(--series); line-height:1.25}
+  .tananote{color:var(--ink2); font-size:12px; margin-top:5px}
+  .vtemps{color:var(--muted); font-size:12px; margin-top:6px}
+  .vpts{display:flex; flex-wrap:wrap; gap:6px}
+  .vpt{border:1.5px dashed var(--est); background:var(--est-bg); color:var(--ink); border-radius:999px; padding:2px 11px; font-size:12.5px}
+  .vpt b{color:var(--est); font-weight:700}
+  .vsub{color:var(--ink2); font-size:12px; margin-top:8px}
+  .vlist{margin:0; padding-left:1.15em; font-size:13px}
+  .vlist li{margin:3px 0}
+  .vwarn{color:var(--est); font-size:12px; margin-top:6px}
+  .vev{grid-column:1 / -1; border-top:1px dashed var(--hair); padding-top:8px; font-size:12px; color:var(--ink2)}
+  .vev b{color:var(--ink)}
+  .windrow{display:flex; flex-wrap:wrap; gap:7px; margin-top:14px; border-top:1px solid var(--line); padding-top:12px; align-items:center}
+  .windout{margin-top:8px; font-size:13px; background:var(--panel2); border-left:3px solid var(--gold); padding:8px 12px; border-radius:0 4px 4px 0}
+  .windout .we{color:var(--muted); font-size:12px; display:block; margin-top:3px}
+  .closed{font-size:14px; color:var(--ink2); margin-top:12px; line-height:1.9}
+  .gocheck{margin-top:14px; font-size:12px; color:var(--ink2); border-top:1px solid var(--line); padding-top:10px}
+  .gocheck a{color:var(--gold)}
+
+  .cal{display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:8px}
+  .calm{min-width:60px}
+  .calm h4{margin:0 0 4px; font-size:12px; color:var(--ink2); letter-spacing:.1em}
+  .cald{display:flex; flex-wrap:wrap; gap:4px}
+  .cd{display:inline-flex; align-items:center; justify-content:center; min-width:26px; height:24px; border-radius:4px; border:1px solid var(--hair); background:var(--panel2); font-size:12px; color:var(--ink); padding:0 6px}
+  .cd.past{opacity:.38}
+  .cd.today{background:var(--ok); border-color:var(--ok); color:var(--bg); font-weight:700}
+  .cd.next{border:2px solid var(--gold); font-weight:700; color:var(--gold-strong)}
+  .cd.today.next{color:var(--bg)}
+  .cd.off{color:var(--muted)}
+  .calnote{color:var(--muted); font-size:12px; margin-top:6px}
+  .caption{color:var(--ink2); font-size:12px; margin:6px 0 0}
+
+  .shore-ladder{margin-top:4px}
+  .sl-row{display:grid; grid-template-columns:9.5em 1fr; gap:8px; align-items:center; margin:6px 0}
+  .sl-lab{font-size:12.5px; color:var(--ink2)}
+  .sl-bar{position:relative; height:14px; background:var(--panel2); border:1px solid var(--hair); border-radius:3px}
+  .sl-fill{position:absolute; top:1px; bottom:1px; background:var(--series); border-radius:2px; opacity:.85}
+  .sl-note{grid-column:2; font-size:12px; color:var(--ink2); margin-top:-4px}
+  .mapscroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .mapswipe{display:none}
+  @media (max-width:680px){
+    .mapscroll svg{min-width:680px}
+    .mapscroll{position:relative}
+    .mapswipe{display:block; color:var(--gold-strong); font-size:12.5px; margin:0 4px 4px; letter-spacing:.04em}
+  }
+</style>
+
+<div class="sheet">
+<header>
+  <div class="eyebrow mincho">OJIRINUMA FIELD ATLAS ・ 2026</div>
+  <h1 class="mincho">大尻沼 一枚攻略図 <span class="pref">— 群馬県利根郡片品村・標高約1,408m</span></h1>
+  <p class="subtitle">丸沼ダムの直下、ひょうたん型の小さな貯水池。公式規則・OSM実測地形・釣行記の採掘だけで組んだ<b>出典明示型</b>の攻略図。完全予約制・ボート釣りのみ(<b>岸釣り全面禁止</b>)・全魚リリース、そのうえ<b>隔年営業</b>という特殊な湖なので、<b>最初のゲートは「その年・その日に入れるか」</b> — 下のパネルが2026年の営業期間と照合して即答する。<b>作らない勇気</b>も仕様: 等深線は公的データが存在せず描かず、水温チャートは近年の実測が1点しかないので作らず、位置根拠のないポイントは地図に載せない。</p>
+  <nav class="lakenav" aria-label="姉妹編マップの切替">
+    <span class="ln-label">⇄ 姉妹編</span>
+    <div class="ln-tabs">
+      <a class="ln-tab" href="https://oatbox99.github.io/marunuma-map/" title="丸沼 一枚攻略図へ移動">丸沼</a>
+      <span class="ln-tab ln-on" aria-current="page">大尻沼<span class="ln-now">表示中</span></span>
+      <a class="ln-tab" href="https://oatbox99.github.io/sugenuma-map/" title="菅沼 一枚攻略図へ移動">菅沼</a>
+      <a class="ln-tab" href="https://oatbox99.github.io/yunoko-map/" title="湯ノ湖 一枚攻略図へ移動">湯ノ湖</a>
+      <a class="ln-tab" href="https://oatbox99.github.io/chuzenjiko-map/" title="中禅寺湖 一枚攻略図へ移動">中禅寺湖</a>
+    </div>
+  </nav>
+  <div class="headmeta">
+    <span class="chip"><b>2026営業</b> 5/16〜10/31・期間中毎日(偶数年＝通年の年)</span>
+    <span class="chip"><b>釣法</b> ルアー・フライのボート釣りのみ/岸釣り禁止/バーブレス・全魚C&amp;R</span>
+    <span class="chip"><b>最大水深</b> 25.0m(平均13.2m・自然環境保全基礎調査)</span>
+    <span class="chip"><b>受付・予約</b> 丸沼温泉 環湖荘 0278-58-2002</span>
+  </div>
+  <div class="legend3">
+    <span class="lg"><span class="dot-solid"></span>確定 — 公式規則・OSM実測・公的調査・一次逐語</span>
+    <span class="lg"><span class="dot-dash"></span>推定 — 釣行記の相対記述やOSM輪郭計算からの推定(誤差あり)</span>
+    <span class="lg"><span class="dot-open"></span>一般論・二次 — 出典が古い/裏取り1系統のみ</span>
+  </div>
+</header>
+
+<!-- ==================== DECISION HERO ==================== -->
+<div class="hero" id="hero">
+  <h2 class="mincho">今日は釣りができる? どう釣る? <span class="today" id="todayline"></span></h2>
+  <div id="openstate"></div>
+  <div class="selrow" id="phasechips" role="group" aria-label="時期の選択"><span class="sl">時期</span></div>
+  <p class="binnote">※時期の区分は釣行記・管理者ブログの記録分布による便宜的なもの。営業判定は2026年の公式期間(下のシーズン帯)と連動。エサ釣りは公式に禁止のため「エサ」の選択肢は作っていない。</p>
+  <div class="selrow" id="stylerow" role="group" aria-label="スタイルの選択"><span class="sl">スタイル</span>
+    <button class="pbtn on" type="button" data-style="fly" aria-pressed="true">フライ</button>
+    <button class="pbtn" type="button" data-style="lure" aria-pressed="false">ルアー</button>
+  </div>
+  <div id="verdict" aria-live="polite"></div>
+  <div class="windrow" id="windrow" role="group" aria-label="状況の選択"><span class="sl">いまの状況は?</span></div>
+  <div class="windout" id="windout" aria-live="polite" hidden></div>
+  <div class="gocheck"><b>出発前に必ず当日情報を確認</b> — このページは実測アーカイブで、当日の予約空き・出船可否・水位は載らない:
+    <a href="https://marunuma-omonosho.jimdofree.com/%E5%A4%A7%E5%B0%BB%E6%B2%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" rel="noopener">公式「大尻沼について」(期間・料金・ルールの一次ソース)</a>/
+    <a href="https://kankoso.naturum.ne.jp/" rel="noopener">丸沼釣り日記(環湖荘スタッフブログ — 濃霧・台風時は前日に出船可否を告知する実績あり)</a>/
+    <a href="https://tenki.jp/leisure/3/13/66/43630/" rel="noopener">現地の天気(tenki.jp 丸沼温泉環湖荘)</a>/
+    <a href="https://www.kendobousai-gunma.jp/kisei/RegulationList.htm" rel="noopener">群馬県 道路規制情報</a>/
+    予約・問い合わせ TEL <b>0278-58-2002</b>(環湖荘・電話のみ、受付7:30〜)</div>
+</div>
+
+<!-- ==================== MAP ==================== -->
+<div class="mapcard">
+  <h2 class="mincho">実測地形図 × ポイント推定配置</h2>
+  <p class="mapsub">汀線・面積・縮尺・方位・丸沼ダム位置=OSM実測(確定)。番号ポイントの位置は釣行記の相対記述からの推定(破線)で、<b>位置根拠が無いポイントは地図に描いていない</b>(下のリストで欠番の理由を明示)。<b>岸釣りは全周で禁止</b>。</p>
+  <div class="maplegend">
+    <span class="lg"><span class="ml-hot"></span><b>金の丸=いまの推奨エリア</b>(上のパネルの時期・スタイルに連動して点灯)</span>
+    <span class="lg"><span class="ml-dim"></span>薄い丸=今回の推奨外(ポイント自体は実在)</span>
+    <span class="lg"><span class="ml-zone"></span>破線の帯=点で確定できず「区間」でしか言えないポイント</span>
+    <span class="lg"><span class="ml-ng"></span>岸沿いの赤帯=岸釣り禁止(全周・公式規則)</span>
+    <span class="lg"><span class="ml-sq"></span>塗り四角=確定施設(位置OSM実測)/<span class="ml-sqd"></span>破線四角=位置推定の施設</span>
+  </div>
+  <p class="mapswipe">← 左右にスワイプすると地図の続き(東の腕・丸沼ダム・ポイント5)が見えます →</p>
+  <div class="mapscroll">
+  <svg id="lakemap" viewBox="0 -40 960 1020" role="img" aria-label="大尻沼の実測地形図とポイント配置">
+    <defs>
+      <linearGradient id="water" x1="0" y1="0" x2="1" y2="0.35">
+        <stop offset="0" stop-color="var(--water2)"/>
+        <stop offset="0.55" stop-color="var(--water1)"/>
+        <stop offset="1" stop-color="var(--water0)"/>
+      </linearGradient>
+      <clipPath id="lakeclip"><path id="lakepath2" d=""/></clipPath>
+    </defs>
+
+    <!-- lake body (OSM relation 13170738, 115 pts; path injected by JS) -->
+    <path id="lakepath" d="" fill="url(#water)" stroke="var(--shore)" stroke-width="2"/>
+    <!-- shore band = 岸釣り禁止(全周). clipped so it reads as an inner band -->
+    <g clip-path="url(#lakeclip)">
+      <path id="lakepath3" d="" fill="none" stroke="var(--ng)" stroke-width="20" opacity=".55"/>
+    </g>
+
+    <!-- R120 (OSM 湖畔区間の代表ノードを結んだ概略) -->
+    <path d="M956,300 L827.4,370.7 L492.2,509.8 L437.1,849.9 L89.7,906.8 L0,922" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="7 5" opacity=".6"/>
+    <g paint-order="stroke" stroke="var(--halo)" stroke-width="3.5">
+      <text x="452" y="466" font-size="10" fill="var(--muted)">国道120号(日本ロマンチック街道・経路は概略)</text>
+      <text x="956" y="286" font-size="10.5" fill="var(--muted)" text-anchor="end">丸沼・環湖荘(受付)方面 →</text>
+      <text x="8" y="940" font-size="10.5" fill="var(--muted)">← 鎌田・沼田IC方面</text>
+    </g>
+
+    <!-- north arrow -->
+    <g stroke="var(--ink2)" fill="var(--ink2)">
+      <line x1="60" y1="8" x2="60" y2="-24" stroke-width="1.5"/>
+      <path d="M60,-30L55,-16L65,-16Z"/>
+      <text x="72" y="-14" font-size="12" stroke="none">N</text>
+    </g>
+
+    <!-- 諸元メモ(左上の空きスペース) -->
+    <g fill="var(--ink2)" font-size="11">
+      <text x="30" y="60">最大水深 25.0m / 平均 13.2m(第2〜4回自然環境保全基礎調査)</text>
+      <text x="30" y="78">面積 0.196km&#178;(OSM実測)/文献 0.19km&#178;・周長 約2.85km(OSM計算)</text>
+      <text x="30" y="96" fill="var(--est)">等深線図は公的にも民間にも存在しない → 本図では描かない</text>
+      <text x="30" y="114">湖岸は自然湖岸100%・うち崖地92.31%(第3回・第4回基礎調査)</text>
+    </g>
+
+    <!-- 丸沼ダム(東端・実質の流入=放水口) OSM way 580081206 -->
+    <rect x="915" y="239" width="13" height="13" fill="var(--gold)"/>
+    <g stroke="var(--series)" fill="var(--series)">
+      <line x1="908" y1="258" x2="880" y2="252" stroke-width="1.5"/>
+      <path d="M872,251L884,246L883,257Z"/>
+    </g>
+    <g paint-order="stroke" stroke="var(--halo)" stroke-width="3">
+      <text x="952" y="196" font-size="11.5" font-weight="600" fill="var(--ink)" text-anchor="end">丸沼ダム(1930年竣工・国重要文化財)</text>
+      <text x="952" y="210" font-size="9.5" fill="var(--ink2)" text-anchor="end">ここからの放水が大尻沼の実質的な流入 — OSM実測</text>
+      <text x="952" y="-22" font-size="10" fill="var(--ink2)" text-anchor="end">受付=丸沼温泉 環湖荘は北東 直線約1.3km(図外)</text>
+      <text x="952" y="-8" font-size="10" fill="var(--ink2)" text-anchor="end">国道経由 約3km・車で約5分</text>
+    </g>
+
+    <!-- 流出=一之瀬発電所取水堰(南西端・位置は推定) -->
+    <rect x="102" y="850" width="12" height="12" fill="none" stroke="var(--est)" stroke-width="1.8" stroke-dasharray="3 2"/>
+    <g stroke="var(--series)" fill="var(--series)">
+      <line x1="100" y1="866" x2="76" y2="884" stroke-width="1.5"/>
+      <path d="M69,889L76,878L82,887Z"/>
+    </g>
+    <g paint-order="stroke" stroke="var(--halo)" stroke-width="3">
+      <text x="126" y="874" font-size="11" font-weight="600" fill="var(--ink)">一之瀬発電所 取水堰(流出)</text>
+      <text x="126" y="887" font-size="9.5" fill="var(--est)">位置=OSM南端(流出河川の起点)からの推定。天端は遊歩道で徒歩通行可</text>
+      <text x="126" y="900" font-size="9.5" fill="var(--ink2)">1937年 上毛電力建設 → 導水路1,870mで一之瀬発電所(最大10,700kW)へ</text>
+    </g>
+
+    <!-- 降り口(丸沼自然遊歩道入口)・位置は推定 -->
+    <g>
+      <circle cx="46" cy="952" r="6" fill="none" stroke="var(--est)" stroke-width="1.8" stroke-dasharray="3 2"/>
+      <text x="60" y="956" font-size="10.5" font-weight="600" fill="var(--ink)" paint-order="stroke" stroke="var(--halo)" stroke-width="3">大尻沼への降り口(丸沼自然遊歩道入口・推定)</text>
+      <text x="60" y="969" font-size="9.5" fill="var(--ink2)" paint-order="stroke" stroke="var(--halo)" stroke-width="3">第2駐車場から徒歩約5分 → ここから船着場まで さらに徒歩2〜3分(合計7〜8分)</text>
+    </g>
+
+    <!-- 湖形のラベル -->
+    <g paint-order="stroke" stroke="var(--halo)" stroke-width="3">
+      <text x="200" y="470" font-size="13.5" fill="var(--ink)" font-weight="600" letter-spacing=".15em">西の盆</text>
+      <text x="200" y="486" font-size="9.5" fill="var(--ink2)">南北400〜500mの広い水面(OSM輪郭)</text>
+      <text x="700" y="128" font-size="13.5" fill="var(--ink)" font-weight="600" letter-spacing=".15em">東の腕</text>
+      <text x="700" y="144" font-size="9.5" fill="var(--ink2)">幅100〜180mの細長い水路が丸沼ダムまで伸びる</text>
+      <text x="30" y="140" font-size="12" fill="var(--ink2)" font-weight="600">別名「ひょうたん沼」— くびれで西の盆と東の腕に分かれる</text>
+      <text x="30" y="156" font-size="10" fill="var(--ink2)">冬季は例年12月中旬に結氷し5月上旬に解氷・積雪3m(『群馬の湖沼』1980)</text>
+    </g>
+
+    <!-- ===== points ===== -->
+    <g font-size="11" font-weight="700">
+      <g id="pt1">
+        <path class="zone" d="M114.7,852.3L110,848L106.5,831.2L100.9,823.5L101.2,806L116.3,789.3L122.4,751L106.2,717.4L113.1,678L103,641.1L78.5,608L41.1,576.6L40,561.6L53.4,522.5L66.4,497.9L69.9,470.6"/>
+        <circle cx="176" cy="740" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="176" y="744" text-anchor="middle" fill="var(--est)" class="pn">1</text>
+        <text x="194" y="744" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">ボート乗り場周辺(西〜南西岸・区間推定)</text>
+      </g>
+      <g id="pt2">
+        <circle cx="397" cy="706" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="397" y="710" text-anchor="middle" fill="var(--est)" class="pn">2</text>
+        <text x="382" y="736" text-anchor="middle" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">国道側(南岸)の崖・オーバーハング下</text>
+      </g>
+      <g id="pt3">
+        <path class="zone" d="M380.1,287.5L340.4,300.6L336.2,312.6L311.9,341.1L316.1,349L313.1,364L290.2,371.2L261.2,366.4L234.1,378.9L209.7,367.7L187.6,379.9L178.6,391.3L163.4,402.9L144.7,404.5L130.4,399.1L130.4,383L116.6,370.1L104.3,367.4L91.2,368.1"/>
+        <circle cx="244" cy="424" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="244" y="428" text-anchor="middle" fill="var(--est)" class="pn">3</text>
+        <text x="262" y="428" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">北岸(遊歩道側)のオーバーハング — 区間推定</text>
+      </g>
+      <g id="pt4">
+        <circle cx="647" cy="157" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="647" y="161" text-anchor="middle" fill="var(--est)" class="pn">4</text>
+        <text x="634" y="196" text-anchor="middle" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">くびれ(最狭部 幅約104m・位置は推定)</text>
+      </g>
+      <g id="pt5">
+        <line x1="913" y1="237" x2="925" y2="230" stroke="var(--est)" stroke-width="1" stroke-dasharray="2 2"/>
+        <circle cx="931" cy="226" r="9" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6"/>
+        <text x="931" y="230" text-anchor="middle" fill="var(--est)" class="pn">5</text>
+        <text x="868" y="300" text-anchor="middle" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">奥・ダムサイト(位置はOSM実測)</text>
+      </g>
+      <g id="pt7">
+        <circle cx="877" cy="71" r="8" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="877" y="75" text-anchor="middle" fill="var(--est)" class="pn">7</text>
+        <circle cx="92" cy="368" r="8" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="92" y="372" text-anchor="middle" fill="var(--est)" class="pn">7</text>
+        <circle cx="434" cy="521" r="8" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="434" y="525" text-anchor="middle" fill="var(--est)" class="pn">7</text>
+        <text x="452" y="525" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">7=岬(候補3点を併記・1点に確定しない)</text>
+      </g>
+      <g id="pt8">
+        <circle cx="230" cy="616" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="230" y="620" text-anchor="middle" fill="var(--est)" class="pn">8</text>
+        <text x="248" y="620" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">沼のど真ん中(盆の中心・推定)</text>
+      </g>
+    </g>
+
+    <!-- locator inset -->
+    <g transform="translate(600,596) scale(0.65)">
+    <!-- locator inset: 5 lakes, OSM outlines, 49.2 m/px at scale 1 -->
+    <g id="locator" transform="translate(0,0)">
+      <rect x="0" y="0" width="320" height="303" rx="4" fill="var(--panel)" stroke="var(--line)"/>
+      <text x="10" y="17" font-size="11" fill="var(--ink2)" font-weight="600">位置関係(OSM実測・5湖・北が上)</text>
+      <g transform="translate(10,30)">
+        <path d="M15.7,24.5L17.1,23.1L18.3,16.7L19.6,16.3L20.2,15.0L19.0,12.1L21.6,10.5L21.6,9.2L23.7,8.4L25.6,4.8L25.5,2.4L30.8,2.8L32.8,4.3L30.1,12.8L32.0,13.6L32.5,15.4L31.2,16.9L28.1,17.7L27.7,19.2L29.2,19.6L27.9,21.1L28.0,23.5L23.2,26.1L21.2,29.3L16.1,26.2L15.7,24.5Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1"/>
+        <path d="M49.1,20.2L52.7,16.9L53.8,13.8L56.8,12.2L58.9,8.8L60.9,8.4L61.6,4.5L64.1,3.0L66.2,0.0L67.8,0.6L68.4,4.0L71.9,5.3L72.5,8.4L70.8,9.4L69.7,8.4L65.9,12.1L66.1,15.8L63.9,17.0L64.0,19.7L68.1,15.2L73.3,19.9L76.2,16.1L79.3,15.1L81.1,21.3L85.0,21.1L86.3,22.0L85.5,22.1L84.7,26.8L80.5,23.5L71.0,19.9L68.2,20.4L65.6,22.2L64.0,20.5L63.1,23.1L59.6,24.0L57.8,23.2L56.2,19.6L55.2,19.6L52.3,22.4L49.0,21.1L49.1,20.2Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1"/>
+        <path d="M15.5,23.7L14.9,20.8L12.5,20.4L10.8,21.3L9.5,20.2L7.6,20.4L4.9,26.0L0.7,26.3L0.0,29.5L1.3,31.6L1.2,34.6L5.5,34.3L6.8,33.3L6.8,27.3L8.6,23.8L11.4,23.3L14.1,24.4L15.5,23.7Z" fill="var(--water2)" stroke="var(--shore)" stroke-width="1.6"/>
+        <path d="M165.7,71.0L167.1,71.1L168.3,68.6L172.3,66.8L170.8,70.5L171.2,71.6L169.3,71.0L169.3,73.3L170.8,76.6L171.3,74.3L173.4,74.2L174.7,79.5L177.1,82.6L176.2,85.5L172.9,84.9L171.5,85.9L169.4,85.3L168.0,84.1L167.3,81.5L164.2,79.8L164.8,75.7L161.1,73.7L165.7,71.0Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1"/>
+        <path d="M278.6,240.2L279.8,242.3L277.2,248.2L273.5,252.6L269.8,255.1L268.2,255.4L266.7,254.4L263.7,257.0L259.4,255.5L259.2,254.0L263.3,246.3L262.7,245.6L260.2,246.6L259.9,249.3L256.2,254.7L254.0,254.7L253.6,252.7L250.9,255.2L243.5,255.4L240.9,253.5L237.1,254.3L235.5,252.2L236.5,248.7L236.0,246.5L238.5,244.1L240.5,244.1L240.7,241.5L242.6,240.3L241.6,237.6L244.3,235.0L241.7,232.4L238.3,232.0L236.8,229.6L240.3,224.1L239.9,220.2L238.1,220.6L236.3,223.7L233.9,224.3L229.2,220.7L229.7,218.8L228.9,216.1L228.0,215.9L225.1,217.1L223.2,219.8L220.5,221.1L219.1,222.8L218.9,225.1L213.5,225.9L212.2,225.0L212.7,223.3L211.8,222.7L211.4,219.6L209.2,220.0L207.2,222.3L203.6,222.9L200.9,221.8L201.4,217.8L194.5,218.4L193.5,217.0L193.7,215.1L192.6,214.3L189.7,214.8L189.4,217.0L186.7,219.0L181.7,220.7L177.8,218.4L176.3,215.1L174.2,213.2L171.6,213.0L170.5,212.0L165.8,213.9L162.9,213.1L161.5,210.4L163.8,204.2L163.2,202.7L164.5,202.4L165.1,200.7L165.4,192.2L169.1,190.5L168.9,187.4L170.6,184.8L175.6,182.5L180.4,185.7L181.8,188.5L183.2,187.1L188.7,186.1L188.5,184.6L191.0,182.7L192.5,183.3L193.4,185.2L198.1,186.8L200.1,186.2L202.0,188.4L204.0,188.9L211.7,185.5L217.6,190.1L219.3,187.0L218.6,185.5L219.3,186.1L222.2,184.7L225.2,186.9L227.4,183.7L234.9,181.9L237.4,184.8L238.0,191.6L246.4,194.5L254.6,202.4L260.8,206.1L265.6,206.8L269.6,210.2L273.0,210.4L274.5,211.6L279.9,210.9L281.5,211.6L282.5,210.5L285.3,210.1L292.5,213.4L300.0,214.5L296.6,222.3L291.4,225.3L290.3,230.4L289.5,230.4L287.9,234.3L283.8,235.2L281.8,237.4L278.7,238.6L278.6,240.2Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1"/>
+        <line x1="24.4" y1="28" x2="38" y2="38" stroke="var(--ink2)" stroke-width="0.8"/>
+        <line x1="8.2" y1="32" x2="14" y2="50" stroke="var(--ink2)" stroke-width="0.8"/>
+        <g paint-order="stroke" stroke="var(--panel)" stroke-width="3">
+        <text x="36" y="44" text-anchor="start" font-size="11" fill="var(--ink2)" font-weight="500">丸沼</text>
+        <text x="0" y="58" text-anchor="start" font-size="13" fill="var(--gold-strong)" font-weight="700">大尻沼(本図)</text>
+        <text x="66" y="-2" text-anchor="middle" font-size="11" fill="var(--ink2)" font-weight="500">菅沼</text>
+        <text x="184" y="82" text-anchor="start" font-size="11" fill="var(--ink2)" font-weight="500">湯ノ湖</text>
+        <text x="228" y="176" text-anchor="middle" font-size="11" fill="var(--ink2)" font-weight="500">中禅寺湖</text>
+        </g>
+        <g stroke="var(--ink2)" stroke-width="1.2"><line x1="198.5" y1="263" x2="300.0" y2="263"/><line x1="198.5" y1="259" x2="198.5" y2="267"/><line x1="300.0" y1="259" x2="300.0" y2="267"/></g>
+        <text x="249.2" y="279" font-size="10" fill="var(--ink2)" text-anchor="middle">5km</text>
+      </g>
+    </g>
+    </g>
+    <text x="600" y="584" font-size="9.5" fill="var(--muted)">丸沼・大尻沼=同一管理者(環湖荘)/菅沼は別管理者・別ルール</text>
+    <text x="600" y="806" font-size="8.5" fill="var(--muted)">輪郭・ID・縮尺(1px&#8776;49.2m)は locator.json(OSM 5湖一括・2026-09-05取得)由来</text>
+    <text x="600" y="818" font-size="8.5" fill="var(--muted)">丸沼 way750375171/大尻沼 rel13170738/</text>
+    <text x="600" y="830" font-size="8.5" fill="var(--muted)">菅沼 way750372959/湯ノ湖 rel10415494/中禅寺湖 rel2314063</text>
+
+    <!-- scale bar -->
+    <g stroke="var(--ink2)" stroke-width="1.5">
+      <line x1="600" y1="856" x2="886" y2="856"/>
+      <line x1="600" y1="850" x2="600" y2="862"/>
+      <line x1="886" y1="850" x2="886" y2="862"/>
+    </g>
+    <text x="743" y="876" font-size="10" fill="var(--ink2)" text-anchor="middle" class="num">250m</text>
+    <text x="952" y="968" font-size="8.5" fill="var(--muted)" text-anchor="end">地形データ &#169; OpenStreetMap contributors (ODbL) — relation 13170738(2026-09-04取得)</text>
+  </svg>
+  </div>
+
+  <div class="pointlist">
+    <div class="pt"><span class="ptn">1</span><span><b>ボート乗り場周辺</b> <span class="d">— 「最初は出船場所中心に魚の姿を探しました」。2020-06下旬に船着場から北側の面を50mほど流した最初のひと流しで13本。2024-09は放流とみられる35〜40cm級が多数。一方2020-09-29の秋は「いつものボートランプ近くは全く釣れず」</span> <span class="s">位置根拠: 座標は特定できず。OSM遊歩道(way 998720399)が取水堰から西岸を北上することと「取水堰側の端」「遊歩道入口から林道をほどなく」の記述から<b>西〜南西岸の区間</b>として帯で表示(点で打たない)</span></span></div>
+    <div class="pt"><span class="ptn">2</span><span><b>国道側(南岸)</b> <span class="d">— 「国道側の下をせめていくと、何回も出ますがなかなかのりませんね」(2024-06-08)。2008-06にはダム手前の国道側の崖ぎりぎりの浅瀬に投げて表層引きでファーストヒット(<span class="warnnote">出典記事ID未特定=要確認</span>)</span> <span class="s">位置根拠: OSM国道120号(way 70165795)のうち湖から120m以内のノード32点の平均 36.82029,139.33464。南岸ラインの代表点であり船着け位置ではない(破線=推定)</span></span></div>
+    <div class="pt"><span class="ptn">3</span><span><b>北岸(遊歩道側)のオーバーハング</b> <span class="d">— 「風向きの加減でかなりボートが流されますが、流れに合わせてオーバーハングの下を打っていくと、何回も出ましたが、結果一回もフッキングせず」(2024-06-08)。2008-06-17は沖から山側の岸ストラクチャーへ投げボトム付近をゆっくりトレースが有効</span> <span class="s">位置根拠: 座標なし。OSM輪郭の北岸(丸沼自然遊歩道が通る側)として<b>区間</b>で表示</span></span></div>
+    <div class="pt"><span class="ptn">4</span><span><b>くびれ(ひょうたんの最狭部)</b> <span class="d">— 2024-06-08にシャロークランクで約50cmのニジマス、セミで50cm後半のヒレピン。2012-07-04は「くびれ〜流れ込み周辺」で4匹、うち3連発(<span class="warnnote">出典記事ID未特定=要確認</span>)</span> <span class="s">位置根拠: OSM輪郭の幅プロファイル計算による最狭部(幅約104m)の中心 36.82463,139.33709 = 推定</span></span></div>
+    <div class="pt"><span class="ptn">5</span><span><b>奥・ダムサイト/丸沼側インレット(東端)</b> <span class="d">— 「特に奥側で良型のヒレピンが釣れていましたよ」(2024-05-18解禁日)。「丸沼からの水の引き込み口でライズがあった」(<span class="warnnote">出典日不明</span>)。放水があるとここから伸びるスカムラインでライズ連発(2022-07-12)。<b>ダム直下は「牧水の渡し」のワイヤーが横断しているので接近時は注意</b>(要現地確認)。<span class="warnnote">ダム直下・取水堰前が立入可か(禁漁区・立入禁止区域の線引き)は公式文に記載がなく未確認 — 接近可否は受付時に確認。放水中はカレントが出るので流れにも注意</span></span> <span class="s">位置根拠: OSM輪郭の東端 36.8240,139.3397。丸沼ダム(way 580081206)中心 36.82393,139.33979 と一致 = 本図で唯一の実測位置(本図の投影式で再計算した位置は丸沼ダム記号と重なるため、マーカーは北東へ約20px≒18mずらし、実位置へ破線で結んでいる)</span></span></div>
+    <div class="pt"><span class="ptn">6</span><span><b>流れ込み(北岸の小沢)</b> — <span class="ngnote">地図に描かない</span> <span class="d">「奥の小さな流れ込みに行っても魚は見えません」(2024-09-11)、「何本か沼に注ぐ小沢が見受けられました」(<span class="warnnote">2012-07-04 管理者ブログ・2026-04-19 ハイキング記録とも出典記事URL未特定=要確認</span>)。基礎調査は流入1川</span> <span class="s">位置根拠: OSMに湖へ注ぐstreamの登録が無く、釣行記も相対記述のみ = 座標未取得のため非表示</span></span></div>
+    <div class="pt"><span class="ptn">7</span><span><b>岬(張り出し)</b> <span class="d">— 「アンカーリングして岬で狙い撃ちしている人もたくさん釣れてました」(2018-06)、「岬の先端状になった所に行くとやっとアタリが来ました。30センチくらいのレインボー」(2024-09-11)</span> <span class="s">位置根拠: 出典2件とも相対記述のみで南岸か北岸かも不明。OSM輪郭の凸頂点候補3点(北岸ダム寄り/北西/盆→腕移行部の南岸張り出し)を<b>併記</b>し1点に確定しない</span></span></div>
+    <div class="pt"><span class="ptn">8</span><span><b>沼のど真ん中(西の盆・中央)</b> <span class="d">— 「後半に釣った魚は全部湖のど真ん中。魚のサイズも岸際よりはど真ん中の方がずっと良かった」(2020-09-29)。2022-09は真ん中で鼻を出す個体の1m先へ投げて40〜60cm弱を20本弱</span> <span class="s">位置根拠: OSM輪郭から盆部中心をおよそ 36.821,139.333 と推定</span></span></div>
+    <div class="pt"><span class="ptn">9</span><span><b>手前左側のシャローエリア</b> — <span class="ngnote">地図に描かない</span> <span class="d">2012-07-04に「1匹が手前左側のシャローエリア」(<span class="warnnote">出典記事URL未特定=要確認</span>)</span> <span class="s">位置根拠: 乗り場位置が未確定のため「左右」の絶対方位も決まらない = 非表示</span></span></div>
+    <div class="pt"><span class="ptn">10</span><span><b>スカムライン(浮きゴミ帯)</b> — <span class="ngnote">地図に描かない</span> <span class="d">「そのほとんどを沖にできるスカムライン(ゴミの溜まり)でテレストリアルを啄む個体」(2022-09)。風と湖流(丸沼ダムの放水)がぶつかって出来る筋</span> <span class="s">位置根拠: 固定位置を持たずその日の風向と放水で動くため、地図に描くと嘘になる。目視で落ち葉・虫の筋を探す</span></span></div>
+    <div class="pt"><span class="ptn" style="border-style:solid; background:var(--gold); color:var(--bg); border-color:var(--gold)">堰</span><span><b>丸沼ダム(東端・実質の流入)</b> <span class="d">— バットレスダム、堤高32.1m・堤頂長88.2m、1930年竣工。国重要文化財・土木学会選奨土木遺産。大尻沼は一之瀬発電所への送水調整池</span> <span class="s">位置=OSM way 580081206(確定)</span></span></div>
+    <div class="pt"><span class="ptn" style="border-style:dashed">出</span><span><b>一之瀬発電所 取水堰(南西端・流出)</b> <span class="d">— 重力式コンクリート堰堤、1937年 上毛電力建設、中央に自由越流式洪水吐2門。天端は丸沼自然遊歩道で徒歩通行可</span> <span class="s">位置根拠: OSM南端(流出河川 way 60714586 の起点)を堰体位置と推定。取水口(導水管入口)の位置は未特定</span></span></div>
+  </div>
+</div>
+
+<div class="maingrid">
+
+<!-- ==================== COL 1 ==================== -->
+<div>
+  <div class="card">
+    <h3>基本情報 <span class="tag tag-fix">確定</span></h3>
+    <table class="kv num">
+      <tr><td>所在地</td><td>群馬県利根郡片品村大字東小川(丸沼ダムの所在表記は「東小川字根子4660」/受付の環湖荘は東小川4658-7)</td></tr>
+      <tr><td>標高</td><td>約1,408m(『日本の湖沼環境』環境庁1989)。<span class="warnnote">1,403m(第2回基礎調査・鳥居1938)/1,406m(第3・4回)/1,407m(国土地理院10m DEM)の異説あり — 取水堰の発電運用で水位が動くため数mの差は正常範囲</span></td></tr>
+      <tr><td>水深</td><td>最大<b>25.0m</b>/平均13.2m(第2〜4回自然環境保全基礎調査)。等深線図は公的・民間とも存在しない</td></tr>
+      <tr><td>面積</td><td>文献0.19km&#178;(基礎調査)/<b>0.1963km&#178;(OSM汀線実測)</b>。周長 約2.85km(OSM計算)/湖岸線2.3〜2.6km(基礎調査)</td></tr>
+      <tr><td>湖形</td><td>別名<b>「ひょうたん沼」</b>。西に南北400〜500mの広い盆、東に幅100〜180mの細長い腕が丸沼ダムまで伸びる。最狭部は幅約104m <span class="tag tag-est">推定</span>(OSM輪郭の幅プロファイル計算)</td></tr>
+      <tr><td>成因</td><td>螢塚山の溶岩が旧大滝川を堰き止めた堰止湖。かつて丸沼と一つの湖で、<b>発電利用の水位低下で二つの沼に分かれた</b>(『日本の湖沼と渓谷 5関東』1987)</td></tr>
+      <tr><td>いまの姿</td><td>丸沼ダム(1930年竣工)の下流にある<b>一之瀬発電所への送水調整池</b>=実質的な貯水池(OSMタグも water=reservoir)</td></tr>
+      <tr><td>水系</td><td>流入1川・流出1川(基礎調査)。実態は流入=丸沼ダムからの放水+北岸の小沢、流出=南西端の取水堰。利根川水系片品川(資料により大滝川/小川と表記が揺れる)</td></tr>
+      <tr><td>透明度</td><td>公的実測3点: 4.6m(1979年度)→5.4m(1980年代半ば)→5.3m(1991年)。<b>湖沼型は中栄養湖</b>(菅沼は貧栄養)。1991年以降の公的測定は未発見</td></tr>
+      <tr><td>漁業権</td><td>群馬県 区第14号(区画漁業権・ます養殖業、令和6年1月1日〜令和10年12月31日)。第五種共同漁業権の遊漁規則ではなく<b>管理者ルールで運用</b></td></tr>
+    </table>
+    <div class="src">出典: 第2〜4回自然環境保全基礎調査(環境庁/環境省)・『日本の湖沼環境』1989・『日本の湖沼と渓谷 5関東』1987・『群馬の湖沼』1980(ja.wikipedia 経由)/OSM relation 13170738/水産庁 群馬県漁業権情報一覧</div>
+  </div>
+
+  <div class="card">
+    <h3>2026年の営業と予約 <span class="tag tag-fix">公式逐語</span> <span class="tag tag-obs">一部ブログ</span> <span class="tag tag-est">一部推定</span></h3>
+    <table class="kv num">
+      <tr><td>営業期間</td><td><b>5月16日〜10月31日・期間中毎日営業</b>(公式「上記期間中毎日営業」)。定期の定休日なし</td></tr>
+      <tr><td>隔年営業</td><td><span class="tag tag-est">推定</span> <b>偶数年=通年(5月中旬〜10/31・毎日)/奇数年=禁漁年</b>だが5月中旬〜6月末の土日限定14日間の特別解禁。<span class="warnnote">2027年は隔年パターン上「禁漁年」の見込み — 公式未発表(推定)</span></td></tr>
+      <tr><td>時間</td><td><span class="tag tag-obs">ブログ</span> 受付7:30〜(環湖荘・公式逐語)/釣り<b>8:00〜17:00</b>。<span class="warnnote">8:00〜17:00の根拠は当年ブログ告知(2026-05-16「釣り時間は 朝8時〜17時迄」)のみで公式ページ本体には記載なし</span></td></tr>
+      <tr><td>予約</td><td><b>完全予約制・電話のみ・先着順</b>(0278-58-2002)。2026年分は<b>5月1日 午前8時</b>受付開始(原文「予約受付開始 令和8年5月1日 午前8時より」)。「8時より前のお電話は無効」</td></tr>
+      <tr><td>艇数</td><td><span class="tag tag-est">推定</span> <span class="warnnote">1日20艘(2020〜2024年は管理者が明記。2026年の公式ページ・ブログに数値の明記なし=推定)</span>。ボート定員は1艘2名まで</td></tr>
+      <tr><td>臨時休業</td><td>公式に定休日の記載はないが、<b>イベント日の臨時休業実績あり</b>(2024-08-24 エクステラ丸沼のため大尻沼も釣り禁止)。当年の有無は電話/ブログで確認</td></tr>
+    </table>
+    <div id="calwrap" class="cal"></div>
+    <p class="calnote">2026年は偶数年=通年営業の年。緑=今日の月/金枠=次に営業が始まる月/灰=過ぎた月。<b>日付単位のカレンダーは作らない</b> — 公式は「期間中毎日営業」としか書いておらず、日別の可否(臨時休業・満艘)は電話でしか分からない。</p>
+    <div class="src">出典: 環湖荘 年間大物賞サイト「大尻沼について」(2026-09-05に再取得し同一内容・年号使い回し無しを確認)+丸沼釣り日記 2026-05-16 解禁記事</div>
+  </div>
+
+  <div class="card">
+    <h3>料金 <span class="tag tag-fix">確定</span></h3>
+    <table class="kv num">
+      <tr><td>入漁料</td><td><b>2,500円</b>(原文「入漁料 2,500円 大人のみ」)。<span class="warnnote">「大人のみ」が『大人料金のみ設定』か『大人限定』か原文で判別不能 — 子供同伴は要電話確認</span>。2023年シーズンに2,200円→2,500円へ改定</td></tr>
+      <tr><td>ボート</td><td><b>3,300円</b>(1艘・定員2名)。2020〜2026年まで据置。手漕ぎ用とエレキ用がある</td></tr>
+      <tr><td>1人1艘</td><td><b>合計5,800円</b>(2,500+3,300)。2名同乗なら8,300円</td></tr>
+      <tr><td>ライフJ</td><td>公式「レンタルがございますのでご利用の場合は環湖荘よりお持ちください」。<span class="warnnote">料金は公式に記載なし — 釣行記(2024)は「無料で借りる事ができます」</span></td></tr>
+      <tr><td>駐車場</td><td>無料(丸沼高原はグリーンシーズン全駐車場無料)。釣り客は<b>丸沼高原スキー場 第2駐車場</b>を利用・路上駐車禁止</td></tr>
+      <tr><td>過去料金</td><td>2020・2021 入漁料2,200円/<span class="tag tag-est">推定</span> <span class="warnnote">2022も2,200円と推定(丸沼と同額からの推定で大尻沼の明記なし)</span>/2018 2,160円/2008 釣り券2,100円+ボート3,200円(ボート代は2008年3,200円→2020年以降3,300円)</td></tr>
+    </table>
+    <div class="src">出典: 公式「大尻沼について」・marunuma.jp(駐車場)・Hermit BLOG(2024)・水辺遍路(2018)</div>
+  </div>
+  <div class="card">
+    <h3>魚種 <span class="tag tag-obs">実釣+管理者記録</span></h3>
+    <ul>
+      <li><b>ニジマス</b>が主対象。「居残りの鱒が多い大尻沼はコンディションの良い鱒が多い」「ヒレピン」と管理者が繰り返し記述。アベレージは年により40cm以上〜「ほとんどが50オーバー」</li>
+      <li><b>ブラウントラウト</b> — 2021・2022年は管理者が「大尻ではレアな魚」としたが、<b>2024-06-19に小型個体を放流</b>、2026年には1日で50cmオーバー2本、8月にも複数記録</li>
+      <li><b>イワナ</b> — 「岩魚自体いつ放流したかわからないくらい前なので、完全なネイティブですね」(管理者・2022-07-04の54cm)</li>
+      <li><b>ヤマメ</b> — 2024-06-19の放流3種の1つとして明記。<span class="warnnote">釣果としての記録は未発見</span></li>
+      <li><b>サクラマス</b> — 2025年特別解禁の管理者総括「後半戦はヒレピンニジマスの他、ブラウン、サクラ、大岩魚まで出る」。<span class="warnnote">単独の釣果写真・サイズ記録は未発見(単一系統)</span></li>
+      <li class="oknote">大尻沼の<b>公式大物記録は存在しない</b> — 環湖荘の年間大物賞は丸沼の記録で、大尻沼の記録欄は無い</li>
+    </ul>
+    <div class="src">出典: 丸沼釣り日記(環湖荘・管理者)2020〜2026/Hermit BLOG</div>
+  </div>
+</div>
+
+<!-- ==================== COL 2 ==================== -->
+<div>
+  <div class="card">
+    <h3>レギュレーション <span class="tag tag-fix">確定(公式逐語)</span></h3>
+    <ul>
+      <li><b>ルアー・フライ限定</b> — 「◎ルアー・フライ限定(エサ釣り等は禁止です)」</li>
+      <li><b>ボート釣りのみ・岸釣り禁止</b> — 「◎ボート釣りのみ(岸釣り禁止)」。持ち込みボート・カヌー等も禁止</li>
+      <li><b>バーブレス+オールキャッチ&amp;リリース</b> — 「◎フックはバーブレスを使用。オールキャッチ&amp;リリース」。<span class="warnnote">フック形状(シングル/トリプル)の指定は公式に無い</span></li>
+      <li>撮影は<b>魚を船上に上げずネット等を使用</b> — 「◎写真等撮影される際は、船の上に上げず、ネット等を使用して撮影するようご協力ください。」</li>
+      <li><b>ライフジャケット着用必須</b>。<b>ウェーダー着用での乗船は控える</b>(「※落水時大変危険です」— Wayback 2023-06版には無く、2023年6月以降に追加された条項)</li>
+      <li>ボート定員は<b>1艘2名まで</b>/完全予約制(電話)/当日は環湖荘で7:30から受付</li>
+      <li>駐車は<b>丸沼高原スキー場 第2駐車場</b>のみ・路上駐車禁止</li>
+      <li><b>焚き火禁止</b> — 「◎丸沼周辺は日光国立公園特別保護地区に指定されております。…焚き火等は絶対にしないでください。」<span class="warnnote">文言は丸沼の釣りルールページ。大尻沼自体が特別保護地区に含まれるかは環境省区域図が未確認</span></li>
+      <li class="warnnote">「ボート上で立っての釣り禁止」は2026年の釣行記1本の伝聞のみで、公式ページには記載なし(同管理者は丸沼側では2022・2025年に告知済) — <b>公式ルールとしては断定しない</b></li>
+      <li class="warnnote">竿数制限・エレキ/エンジンの可否・湖内の禁漁区/立入禁止区域は<b>公式に明文なし</b> — 予約電話で要確認(エレキは2019年に持込・出船した釣行記の実例あり。2024年の釣行記もバッテリー運搬の面倒さに言及)</li>
+      <li class="ngnote">丸沼のルール(竿2本まで・持ち帰り5尾・20cm以下リリース・4:30am〜日没の時間帯)は<b>大尻沼には適用されない別物</b>。同じ管理者でも湖ごとに別ルール</li>
+    </ul>
+    <div class="src">出典: 環湖荘「大尻沼について」原文(2026-09-05再取得・逐語照合済)/Wayback 2023-06-26版との差分/Hermit BLOG 2026</div>
+  </div>
+
+  <div class="card">
+    <h3>ボート運用と歩き <span class="tag tag-obs">実測</span></h3>
+    <ul>
+      <li>受付(環湖荘)→車で約5分で第2駐車場→<b>徒歩7〜8分</b>で船着場(降り口までは駐車場から徒歩約5分)。<b>船着場まで車は入れない</b></li>
+      <li>ボートは<b>1日20艘</b>(2020〜2024年に管理者が明記。2026年の公式ページ・ブログには数値の明記が無く<span class="warnnote">推定</span>)・<b>手漕ぎ用とエレキ用</b>。好きな艇を選ぶ。前日雨だと水が溜まっているので備え付けの柄杓で掻き出してからスタート</li>
+      <li><b>エレキ・バッテリー等の重い荷物</b>は、遊歩道に入ってすぐの水辺(取水堰上流側)に船を回して積むと楽。<span class="warnnote">ただし持込エレキの公式可否は公式ページに記載が無い(レンタル艇にはエレキ用の設定あり) — 持ち込む場合は予約時に電話で要確認</span></li>
+      <li>船着場では<b>足が水に浸かるので長靴が必須</b>(公式はウェーダーでの乗船を控えるよう要請)</li>
+      <li>湖が小さいので手漕ぎで十分。ただし風でボートポジションが取りづらい時は<b>アンカリングして遠い魚を探す</b>。慣れない人は沖にアンカーして投げる方法でも釣れる</li>
+      <li>解禁直後の土日は満艘になりやすく<b>平日は空きがある</b>(「土日は混むので少し前からの予約が必要ですが、平日は前日予約でほぼ大丈夫」)</li>
+      <li class="warnnote">丸沼ダム下端(=大尻沼東端)には<b>ワイヤーと滑車の手作り渡し船「牧水の渡し」</b>(ドラム缶いかだ)があり、見学者が自己責任で対岸へ渡る。奥へ入る際はワイヤーに注意(要現地確認)</li>
+      <li class="warnnote">ボート乗り場にトイレは無い(2008年時点の記述・現状要確認)。確実なのは丸沼高原第1駐車場のトイレ(24時間)</li>
+    </ul>
+    <div class="src">出典: Hermit BLOG(2024-06/2026-06-30)・ALFRED(2019-06)・チョッチの釣りブログ(2024-09-11)・neoSTYLE/かんつり(2008)・文化遺産見学案内所(2025)</div>
+  </div>
+
+  <div class="card">
+    <h3>「棚」ではなく「距離」の釣り <span class="tag tag-obs">実測</span></h3>
+    <p style="margin:0 0 6px; font-size:12.5px; color:var(--ink2)">全出典を走査しても<b>深さ(m)の記録は一つも存在しない</b>。あるのは「表層」「少し沈める」「岸際30cm」と、<b>魚とボートの距離</b>の記録だけ。だから縦の棚ではなく横の距離をラダーにした。</p>
+    <div class="shore-ladder num">
+      <div class="sl-row"><span class="sl-lab">魚まで10m以内</span><div class="sl-bar"><div class="sl-fill" style="left:0%;width:14%;opacity:.3"></div></div></div>
+      <p class="sl-note">「魚との距離が10m以内だとボートを意識して喰わない」(2024-06) — 近づきすぎない。ここは<b>捨てる距離</b></p>
+      <div class="sl-row"><span class="sl-lab">魚まで15m以上</span><div class="sl-bar"><div class="sl-fill" style="left:18%;width:34%"></div></div></div>
+      <p class="sl-note">サイトの主戦場。15m以上先の魚を見つけ、<b>進行方向90cm先</b>(魚が2〜3秒で到達する位置)へリーチキャスト。スレた個体は「正確に1m手前」でないと見切る(2026-06-30)</p>
+      <div class="sl-row"><span class="sl-lab">岸際30cmの引き波</span><div class="sl-bar"><div class="sl-fill" style="left:2%;width:10%"></div></div></div>
+      <p class="sl-note">回遊が少ない日に拾う小さな動き(2022-07-12)。周囲ほぼ全周がオーバーハングなのでその下を流す</p>
+      <div class="sl-row"><span class="sl-lab">沼のど真ん中</span><div class="sl-bar"><div class="sl-fill" style="left:40%;width:45%"></div></div></div>
+      <p class="sl-note">落ち葉と虫の吹き溜まり(スカムライン)が真ん中に出る日は、<b>岸際よりサイズが良い</b>(2020-09-29/2022-09/2026-06-30)</p>
+      <div class="sl-row"><span class="sl-lab">沈める(最後の手)</span><div class="sl-bar"><div class="sl-fill" style="left:30%;width:55%;opacity:.35"></div></div></div>
+      <p class="sl-note">晴天無風でドライが全滅した時だけ、ファストインターミディエイト+マラブーのカウントダウン(2024-09-11に30cmと50cmオーバー)。<b>深さの数値は書けない</b></p>
+    </div>
+    <p class="caption">2020年代の躍層・水温プロファイルの実測はゼロ。等深線図も存在しない。<b>深度ラダーは作らない</b>。</p>
+  </div>
+
+  <div class="card">
+    <h3>放流 <span class="tag tag-gen">記録が1件しかない</span></h3>
+    <ul>
+      <li><b>2024-06-19: ニジマス・ヤマメ・ブラウンの3種</b>(ブラウンは「まだ小さい個体」)。2023〜2026年のブログ全月走査で、大尻沼への放流を明記した投稿は<b>この1件のみ</b>。kg・尾数は未公表</li>
+      <li>2025-05-12に環湖荘公式FB/IGが「元気なトラウトたち」の放流を告知(特別解禁初日の5日前)。<span class="warnnote">ログイン壁で原文未取得=単一系統</span></li>
+      <li>2024-05-18の解禁日、管理者は放流に触れつつ<b>「居残りの鱒が多い」</b>と記述 — 放流魚より越冬個体が主体という見方</li>
+      <li class="warnnote">2024-09上旬に「放流があったのか前回見かけなかった35〜40センチ台が元気よく泳ぎ回っていた」= 釣り人の推定で管理者側の記録はなし</li>
+      <li class="warnnote"><b>2026年シーズンの放流は2026-09-05時点で未確認</b>(再探索でも新規記録0件) — 数量・尾数は作らない。現況は電話で確認</li>
+      <li class="ngnote">2024-05-18記事の「神山水産様のご厚意で5キロオーバーが17本」は<b>丸沼</b>の釣り大会用放流で大尻沼ではない(混入注意)</li>
+    </ul>
+    <div class="src">出典: 丸沼釣り日記 2024-06-19/2024-05-18・環湖荘FB 2025-05-12・Hermit BLOG 2024-09</div>
+  </div>
+</div>
+
+<!-- ==================== COL 3 ==================== -->
+<div>
+  <div class="card">
+    <h3>水の性格 — 近年の実測は1点だけ <span class="tag tag-obs">実測+歴史値</span></h3>
+    <table class="kv num">
+      <tr><td>2022-08-06</td><td><b>水温 19.0℃</b>(表層・深度の記載なし/晴・気温15℃〜)。<b>2020年代で見つかった大尻沼の水温実測はこの1点だけ</b> <span class="tag tag-obs">実測</span></td></tr>
+      <tr><td>1913〜1917年</td><td>表層10.5〜19.0/5m 9.0〜14.6/10m 7.8〜12.3/15m 7.5〜10.6/20m 7.0〜10.0℃(5月下旬〜7月中旬の14回観測)。<b>丸沼ダム築造前</b>の値で、現在の湖盆とは水位・形態が異なる <span class="tag tag-gen">古い出典</span></td></tr>
+      <tr><td>躍層</td><td>鳥居は丸沼・大尻沼を「水温分布が対数曲線状」=<b>明瞭な躍層を作らない型</b>に分類。吉村も「夏季停滞期には双温層の発達が悪い」 <span class="tag tag-gen">1930年代</span></td></tr>
+      <tr><td>湧水</td><td>1930年代の塩化物調査でCl濃度31mg/L(国内の湖の一般値約10mg/Lの3倍)。「異常水質を有つ湧水の注入」がある湖に分類 <span class="tag tag-gen">1934年</span></td></tr>
+      <tr><td>透明度</td><td>4.6m(1979年度)/5.4m(1980年代半ば)/5.3m(1991年)・中栄養湖 <span class="tag tag-fix">公的</span></td></tr>
+      <tr><td>水位</td><td>取水堰の発電運用で<b>人為的に変動</b>。2020年は5月末〜6/1が減水の底→6/19「現在9割くらい」→7/4「再度大減水」。減水でも釣果への悪影響は報告されていない</td></tr>
+      <tr><td>水の動き</td><td>止水ではなくダム湖。<b>丸沼ダムからの放水の有無</b>でコンディションが変わる(放水中は高活性、放水無しは回遊が少なく渋い)</td></tr>
+      <tr><td>結氷</td><td>例年12月中旬に結氷し5月上旬に解氷、冬季の積雪は3m(『群馬の湖沼』1980)。<span class="warnnote">近年の結氷日・解氷日の実測は未発見</span></td></tr>
+    </table>
+    <p class="caption warnnote">季節別の<b>水温チャートは作らない</b> — 大尻沼固有の2020年代の実測は上の1点しかなく、曲線を引けば創作になる。上の歴史値は<b>1913〜1917年(丸沼ダム築造前)</b>の学術観測で、「近年の実測」ではない。丸沼の値(2026-08-27「20℃切る位」等)も大尻沼の値ではないので混ぜていない。現代のpH・溶存酸素・COD等の公的水質データも存在しない(環境基準点対象外)。</p>
+    <div class="src">出典: ameblo tacket2087(2022-08-06)/鳥居菅生「初夏の湖沼水温」農業土木研究10(2)1938 第7表(原データ=田中阿歌麿)/吉村信吉「日本の湖水の化学成分III 塩化物」陸水学雑誌3(3)1934/第2〜4回自然環境保全基礎調査/丸沼釣り日記2020</div>
+  </div>
+
+  <div class="card">
+    <h3>大物実績 <span class="tag tag-obs">実測(公式記録ではない)</span></h3>
+    <table class="bigtable num">
+      <tr><th>サイズ</th><th>魚種</th><th>状況</th><th>出典</th></tr>
+      <tr><td><b>65cm</b></td><td>ニジマス</td><td>2020-06下旬 船着場から北側の面・カメムシフライ。同日30本程・最小40cm</td><td>Hermit</td></tr>
+      <tr><td>60cm超</td><td>ニジマス</td><td>2021-05-15〜16 全体に活性が低い週末に(特別解禁年)</td><td>管理者</td></tr>
+      <tr><td>60cm</td><td>ニジマス</td><td>2016-08〜09 水面直下ストリーマー。同釣行でドライ46cm・ビートル50cm超</td><td>VARIVAS</td></tr>
+      <tr><td>60cm弱</td><td>ニジマス(推定)</td><td>2024-08下旬 午後から表層で連発・2人でセミ10本以上</td><td>管理者</td></tr>
+      <tr><td><b>58cm</b></td><td>ブラウン</td><td>2022-07-04 「大尻ではレアな魚ですね!! 綺麗な魚体です」</td><td>管理者</td></tr>
+      <tr><td>50cm後半</td><td>ニジマス(ヒレピン)</td><td>2024-06-08 セミルアー・乗り場〜国道側〜くびれ〜ダムサイトの巡回中(原文「50㎝後半のヒレピンニジマス」— cm単位の実測値ではない)</td><td>管理者</td></tr>
+      <tr><td><b>54cm</b></td><td>イワナ</td><td>2022-07-04 58cmブラウンと同一釣人。「完全なネイティブですね」</td><td>管理者</td></tr>
+      <tr><td>50cm×2</td><td>ブラウン</td><td>2026-06上旬 蝉ルアー+ドライ。1艘2名で20本・ほとんど50オーバー</td><td>管理者</td></tr>
+      <tr><td>47cm</td><td>ブラウン</td><td>2026-06中旬 ドライフライ</td><td>YouTube</td></tr>
+    </table>
+    <p class="caption warnnote">これは<b>公式の最大記録ではない</b> — 環湖荘の年間大物賞は丸沼のもので、大尻沼の記録欄は存在しない。上表は管理者ブログ・釣行記に出た個別数値。管理者ブログに併載される73cm/71cm/56.5cm(2026-06「大物賞更新です!!&amp;大尻沼釣果情報」)やサクラマス48cm(2022-05「サクラ出ました!!」)は<b>丸沼</b>の記録なので除外した。</p>
+  </div>
+
+  <div class="card">
+    <h3>タックル実例 <span class="tag tag-obs">実釣記の実使用</span></h3>
+    <ul>
+      <li><b>フライ ロッド</b>: 9ft 5〜6番。<b>魚が太く4番ではパワー不足</b>で寄せられないという結論が2022・2024年とも一致。折損に備え2本持つと安心(沼最奥で折ると車まで往復40〜50分)</li>
+      <li><b>ティペット</b>: 10ft 3X+フロロ3Xを60〜90cm。2026年は2〜4X。<b>リトリーブは4Xまで、ドライでも6Xより細くしない</b>(アベレージが40cmオーバー)</li>
+      <li><b>フライ</b>: 春〜初夏=セミフライ#4・シンガマボディ#8・モホーク・ジバチ・オナシカワゲラ#12(蛍光色のパラシュートポストは嫌がる)/渋い時=フライングアント#11〜12・クリンクハマー黒#14・マシュマロパターン/夏〜秋=フォームビートル・フォームカメムシ#8〜#10(オレンジ・チャート実績)/沈める=ファストインターミディエイト+マラブー</li>
+      <li><b>ルアー(主軸は蝉)</b>: スミス 美蝉/大美蝉、ティムコ シケイダーオリジン・タイニーシケイダー、メガバス シグレ(ファー付)、ValKein シャインライド。トンボは THタックル 濱トンボ</li>
+      <li><b>スプーン</b>: 3.5〜7g。管理者推奨はアルフレッド丸沼オリカラの5g(「特に5gは大尻におすすめ」)。切り札にシャロークランク、食い渋りにリップレスミノー、ブラウン狙いに11〜13cmミノー</li>
+      <li><b>ルアーロッド/ライン</b>: 6.3〜6.7ftのベイトまたはスピニング、PE0.6〜0.8号+フロロリーダー5〜8lb。「引きが強く、釣れると大体フックが伸びますので必ず替えを用意しましょう」</li>
+      <li class="warnnote"><b>フック形状</b>: 公式規定は「フックはバーブレスを使用」のみでシングル/トリプルの指定は無い(2026-09-05再確認)。トリプル可否は釣具店員の個人見解に留まる — 使う場合も全バーブを完全に潰す。要現地確認</li>
+      <li><b>合わせ</b>: バシャッと出た瞬間に合わせず一呼吸。反転を見届けるか、ラインが引かれてから</li>
+      <li class="ngnote"><b>エサの記述は作らない</b> — 公式にエサ釣り禁止で、一次資料にも「エサはこう」という記述が存在しない</li>
+    </ul>
+    <div class="src">出典: Hermit BLOG(2018/2020/2022/2024/2026)・WILD-1高崎店(2026)・つり具の上州屋 東大和店(2022-09-29)・ALFRED(2019)・サーフェイス・アウトフィッター(2024-10)・ワンダーフィールド・VARIVAS(2016)・丸沼釣り日記</div>
+  </div>
+</div>
+</div><!-- /maingrid -->
+
+<!-- ==================== BOTTOM BANDS ==================== -->
+<div class="band">
+  <h2 class="mincho">一日の実戦手順 <span class="tag tag-obs">実測(2008〜2026 釣行記+管理者)</span></h2>
+  <div class="cols3">
+    <div>
+      <div class="step"><span class="stepn">1</span><span><b>7:30 環湖荘で受付・支払い</b>(片品村東小川4658-7)。入漁料2,500円+ボート3,300円。ライフジャケットが無ければここで借りる。予約は電話のみ・先着順(土日は事前必須、平日は前日でほぼ可)</span></div>
+      <div class="step"><span class="stepn">2</span><span><b>車で丸沼高原スキー場 第2駐車場へ(約5分)</b>。国道120号を下流方向へ戻る。<b>路上駐車は公式に禁止</b></span></div>
+    </div>
+    <div>
+      <div class="step"><span class="stepn">3</span><span><b>徒歩で降り口→船着場(駐車場から7〜8分)</b>。矢印看板から遊歩道を下る。エレキ等の重い荷物は入ってすぐの水辺に船を回して積む(<span class="warnnote">持込エレキの公式可否は公式ページに記載なし=予約電話で要確認</span>)。<b>乗降で足が濡れるので長靴</b></span></div>
+      <div class="step"><span class="stepn">4</span><span><b>8:00 出船。まず乗り場周辺から岸際を流す</b>。周囲ほぼ全てがオーバーハング。乗り場→国道側(南岸)→反対側(北岸)の順に反応を見る。<b>魚とは10m以上の距離を保つ</b></span></div>
+    </div>
+    <div>
+      <div class="step"><span class="stepn">5</span><span><b>10時〜正午が時合</b>。朝は魚が浮いておらず10時頃から回遊が見え始める(ドライの反応が良いのは10:30〜12:30の実測)。くびれ→奥(ダムサイト)へ。水色が悪ければグリーンの水域、放水があればインレットのスカムライン、岸際が薄ければ真ん中のライズへ切替。<b>奥はワイヤーに注意</b></span></div>
+      <div class="step"><span class="stepn">6</span><span><b>17:00 納竿</b>。夕マズメは営業時間外で粘れない。<span class="warnnote">丸沼高原の冬季ページには「第2駐車場は17時閉鎖」の記載があり(グリーンシーズンの閉鎖時刻は未確認)、17:00納竿+徒歩7〜8分と近接する — 予約電話の際に閉鎖時刻を確認</span>撮影は魚を船上に上げずネット内で。秋は帰路の紅葉渋滞が激しいので早めの離脱も選択肢</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="band">
+  <h2 class="mincho">予約の実務 <span class="tag tag-fix">確定(公式フロー)</span> <span class="tag tag-obs">一部ブログ実測</span></h2>
+  <div class="cols2">
+    <ul>
+      <li><b>電話のみ・先着順</b>(0278-58-2002)。当年分は<b>5月1日 午前8時</b>受付開始 — 予約開始日は2020〜2026年すべて5月1日8:00で一貫</li>
+      <li>「8時より前のお電話は無効」「5月1日8時ころは電話が大変繋がりにくくなります」(2021年告知)</li>
+      <li>翌年の内容は<b>3〜4月に環湖荘ブログ「丸沼釣り日記」で告知</b>される慣行(発表日の実績: 2020-04-30/2021-04-17/2023-04-26/2024-04-30/2025-03-05/2026-04-20)</li>
+    </ul>
+    <ul>
+      <li><b>解禁直後の土日は満艘</b>になりやすく、平日は空きがある。雨予報でキャンセルが出て空きが再放出されることも</li>
+      <li class="warnnote"><b>キャンセル規定(料金・締切・雨天時の扱い)は公式・ブログとも記載が見つからない</b> — 予約時に確認</li>
+      <li class="warnnote">公式ページは年度ごとに文言を使い回すため年号が古いまま残ることがある(過去に2023年度版で「令和3年5月1日」)。<b>必ずブログの当年告知と突合</b>すること</li>
+      <li class="ngnote">2026年は当初ブログで「期間中の土、日のみ営業」と<b>誤記</b>され2026-04-30に「期間中毎日営業」へ訂正済。検索AIの要約が旧記載を拾う恐れがある</li>
+    </ul>
+  </div>
+</div>
+
+<div class="band">
+  <h2 class="mincho">位置未特定・未確認事項 <span class="tag tag-gen">実在は確認・確定情報なし</span></h2>
+  <p style="margin:0 0 8px; color:var(--ink2)">以下は記録に登場するが確定できないため<b>地図に描かない/断定しない</b>:</p>
+  <div class="unk">
+    <span>ボート乗り場の正確な座標 — OSMに桟橋タグ無し・釣行記は相対記述のみ</span>
+    <span>「第2駐車場」の正確な位置・閉鎖時刻・トイレ有無 — 公式のグリーンシーズン一覧に名称が無い</span>
+    <span>流れ込み(北岸の小沢・奥の小さな流れ込み)の位置 — OSMに登録なし</span>
+    <span>岬の位置 — 南岸か北岸かも不明。候補3点の併記に留める</span>
+    <span>最深部(25m地点)の位置・等深線 — 国土地理院の湖沼図が刊行されていない</span>
+    <span>湧水の湧出点 — 1934年にCl成層から推定されたが位置の記載なし</span>
+    <span>葦帯 — 実在は確認できるが位置の記載が一切ない</span>
+    <span>湖内の禁漁区・立入禁止区域の境界 — 公式文に記載なし</span>
+    <span>2020年代の水深別水温・躍層深度 — 実測ゼロ</span>
+    <span>取水堰の日常的な水位変動幅・満水位・放水スケジュール</span>
+    <span>エレキ・持込エンジン・竿数・フック形状の公式可否</span>
+    <span>子供の入漁可否・子供料金(公式は「大人のみ」の一文だけ)</span>
+    <span>携帯電波の可否(湖上・第2駐車場・環湖荘周辺) — 釣行記6本にも記述なし</span>
+    <span>2026年シーズンの放流(日付・魚種・数量)</span>
+    <span>2026-10-31の営業終了告知と2027年の公式発表 — 未来日</span>
+    <span>「牧水の渡し」いかだの設置側 — 3対1で大尻沼側だが決定打なし</span>
+  </div>
+</div>
+
+<div class="band">
+  <h2 class="mincho">アクセス・安全 <span class="tag tag-fix">確定+実測</span></h2>
+  <div class="cols3">
+    <ul>
+      <li>関越道 沼田ICから<b>約50分</b>、日光宇都宮道路 清滝ICから約60分(丸沼高原公式)。<span class="warnnote">環湖荘公式の区間積算は約85分で出典間に差</span></li>
+      <li>国道120号(金精道路)の2025-26冬期閉鎖は<b>2025-12-25正午〜2026-04-24正午</b>(金精トンネル〜丸沼スキー場入口12.1km)。閉鎖区間は丸沼スキー場入口より<b>栃木側</b>なので、群馬側(沼田IC)からは閉鎖区間外。<span class="warnnote">2026-27冬の日程は2026-09-05時点で未発表(例年10月中旬発表)</span></li>
+      <li>国道120号 丸沼入口〜白根発電所10.7kmは<b>連続雨量120mmで通行規制</b>(予備規制80mm)。実況は群馬防災情報で確認</li>
+      <li>路線バス 関越交通 湯元温泉線は<b>2026年6/1〜10/25の土日祝のみ</b>(実運行開始6/6)。「丸沼温泉環湖荘」停 7:47着 — <b>受付(7:30〜)には間に合う</b>。帰路の最終は環湖荘17:17発。<span class="warnnote">ただし受付の先(車で約5分の第2駐車場→徒歩7〜8分の船着場)を車以外で移動する手段が未確認のため、8:00出船に間に合う保証はない — バス利用を検討する場合は予約電話で移動手段を確認すること</span></li>
+    </ul>
+    <ul>
+      <li>標高約1,408m — <b>朝は氷点近くまで冷える</b>。実測: 2026-04-25朝8時3℃・2026-05-30朝4℃(この2点は<b>丸沼</b>=同管理者・隣接湖の記録)/2026-06-24朝12℃(YAMAP活動記録の気温メモ)/2026-08-27最高15℃<span class="warnnote">観測地点は未確認</span>。<span class="warnnote">大尻沼に気温の定点観測は無く(AMeDAS片品は降水専用で気温欠測)、4値とも湖上の計測ではない周辺の記録</span>丸沼高原の毎朝5時平均気温は2025年 5月8.0/6月14.2/7月17.4/8月15.9/10月9.1℃(日中最高はこれより5〜10℃高い)</li>
+      <li><b>低水温=低体温症</b>: 同管理者が<b>丸沼</b>で掲示している目安(水温10〜15℃で意識不明まで1〜2時間・生存1〜6時間)。大尻沼の解禁期も同水温帯と<span class="warnnote">推定</span>。ライフジャケット必着、二人乗船時は荷重を偏らせない</li>
+      <li><b>雷</b>: 15時前後の雷雨で撤収した実測が複数(2022-07-12/2024-09-11/2026-08-08)。ボート上に逃げ場はない — 遠雷の段階で岸へ。<span class="warnnote">公的な雷頻度データは無い</span></li>
+      <li>日陰ゼロ — 帽子・水分補給は絶対(管理者、2026-07-23に日中27℃)。10月は高標高部で降積雪の恐れ、冬タイヤ・チェーン携行</li>
+    </ul>
+    <ul>
+      <li><b>熊</b>: 日光国立公園内で周辺は生息域。北岸の遊歩道は林内を通るため鈴が設置されている。片品村東小川でも2025-08-17・2025-10-21に目撃記録。<span class="warnnote">出没件数は日々変わるので本図には数を固定表示しない</span> — 最新は <a href="https://kuma-watch.jp/spot/marunuma" rel="noopener" style="color:var(--gold)">KumaWatch(丸沼周辺)</a> と <a href="https://www.pref.gunma.jp/page/7141.html" rel="noopener" style="color:var(--gold)">群馬県 ツキノワグマ情報</a> で確認(本図の調査は2026-09-04時点)</li>
+      <li><b>2025年6月、同管理者の丸沼で落水による死亡事故</b>(37歳男性)。以後ボートフィッシングのルールが段階的に厳格化された — ライフジャケット必着・立ち上がり釣り自粛・荷物のバランス・ウェーダー自粛。<span class="ngnote">これは丸沼の事故で大尻沼ではないが、同じ管理者・同じ手漕ぎボートの湖</span></li>
+      <li>浸水: 乗り場は砂利が多く船底が損傷することがある(丸沼の告知)。浸水したら直ちに岸へ寄り別のボートに乗り換え環湖荘へ連絡</li>
+      <li>ドローン: 日光国立公園内は土地管理者への事前確認が必須で、丸沼高原は場内全面禁止。<span class="warnnote">大尻沼水面での管理者の明文規則は未確認</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="honest">
+  <b>この図が「作らなかった」もの(正直性の宣言)</b> — ①<b>等深線・ドン深/遠浅の色分け</b>: 国土地理院の湖沼図が刊行されておらず(群馬県の湖沼は皆無)、公的にも民間にも等深線データが存在しない。判明しているのは最大25.0m/平均13.2mと「奥のダム方向は浅い」という定性記述だけなので、水深の面的表現は一切描かない。②<b>季節別の水温チャート</b>: 大尻沼固有の2020年代の実測は2022-08-06の19℃という1点のみ。載せた他の水温はすべて1913〜1917年(丸沼ダム築造前)の学術観測か丸沼の値で、現在の大尻沼の水温として断定しない。③<b>棚(水深m)の数値</b>: 全出典を走査しても「表層」「少し沈める」「岸際30cm」といった定性表現しかなく、「◯m」という数字はどのフェーズにも書いていない。④<b>位置根拠のないポイント</b>: ボート乗り場・北岸オーバーハングは点ではなく<b>区間の帯</b>で、岬は<b>候補3点の併記</b>で、流れ込み・手前左側のシャロー・スカムラインは<b>地図に描かない</b>。実測座標に基づくのは奥・ダムサイト(5)と丸沼ダムだけ。⑤<b>湖内の禁漁区・立入禁止区域の線</b>: 公式文に記載がなく、ダム直下・取水堰前・渡しいかだのワイヤー付近の扱いが不明なので境界を引かない。⑥<b>2027年の営業形態</b>: 隔年パターン(奇数年=禁漁年、5月中旬〜6月末の土日14日間の特別解禁)からの推定で、2026-09-05時点で公式発表はない。営業年・営業日は環湖荘の当年告知と電話だけを信じること。⑦<b>放流の数量・大物の公式記録・動画内の魚種</b>: 放流はkg・尾数が全年未公表、環湖荘の年間大物賞は丸沼の記録で大尻沼の記録欄が存在せず、YouTubeの「激レアすぎる巨大魚」等は本編未視聴のため魚種・サイズを推測しない。
+</div>
+
+<footer>
+  <b>出典</b> — 2026年のルール・料金・期間・予約: 環湖荘 年間大物賞サイト「大尻沼について」(marunuma-omonosho.jimdofree.com、2026-09-05再取得・逐語照合)/解禁告知・釣果・放流・当日可否: 丸沼釣り日記(丸沼温泉環湖荘スタッフブログ・kankoso.naturum.ne.jp、2020-05〜2026-09の月別アーカイブを走査)/アクセス・駐車場: marunuma.com・marunuma.jp/漁業権: 水産庁 群馬県漁業権情報一覧(区第14号)/諸元: 第2回(1980)・第3回(1987)・第4回(1993)自然環境保全基礎調査 湖沼調査報告書、『日本の湖沼環境』環境庁1989、『日本の湖沼と渓谷 5関東』1987、『群馬の湖沼』上毛新聞社1980(ja.wikipedia 経由)、国土地理院 調査実施湖沼一覧/水温・水質: 鳥居菅生「初夏の湖沼水温」農業土木研究10(2)1938(原データ=田中阿歌麿、丸沼ダム築造前)、吉村信吉「日本の湖水の化学成分III 塩化物」陸水学雑誌3(3)1934/丸沼ダム: 土木学会 選奨土木遺産解説シート・ダムの訪問記(一之瀬発電所取水口)・文化遺産見学案内所(牧水の渡し)/実釣記録: Hermit BLOG(2018/2020/2022/2024/2026 計9本)・WILD-1高崎店・つり具の上州屋 東大和店(2022-09-29)・ALFRED(2019-06)・サーフェイス・アウトフィッター(2024-10)・ワンダーフィールド・チョッチの釣りブログ(2024-09-11)・fisherman-k-o・ameblo tacket2087(2022-08-06 水温)・VARIVAS パワートレイル釣行記(2016・Wayback)・水辺遍路(2018)/遊歩道: haitosu.org・みどりの風に吹かれて3(2016)/道路: 群馬県道路管理課(冬期閉鎖・雨量規制)・群馬防災情報/バス: 関越交通 湯元温泉線 2026年時刻表/熊: 群馬県 自然環境課・KumaWatch・クママップ/気温: 丸沼高原リージェントハウス 気象データ・バンク/地形・面積・距離・位置: &#169; OpenStreetMap contributors(ODbL)relation 13170738 による実測(2026-09-04取得)。
+  <br>姉妹編(5湖): <a href="https://oatbox99.github.io/marunuma-map/" rel="noopener">丸沼 一枚攻略図</a> / <a href="https://oatbox99.github.io/sugenuma-map/" rel="noopener">菅沼 一枚攻略図</a> / <a href="https://oatbox99.github.io/yunoko-map/" rel="noopener">湯ノ湖 一枚攻略図</a> / <a href="https://oatbox99.github.io/chuzenjiko-map/" rel="noopener">中禅寺湖 一枚攻略図</a>(<b>丸沼・菅沼</b>は2026-09-06にHTTP 200を確認済/<b>湯ノ湖・中禅寺湖</b>は同時制作中で本図作成時点では未公開=リンク切れの場合あり)。<b>丸沼と大尻沼は同一管理者(環湖荘 0278-58-2002)だがルール・料金・営業時間は湖ごとに別物</b>、菅沼はさらに別管理者。2026-09-05作成。全ファクトは多エージェント採掘+敵対検証(公式原文との逐語照合・引用実在スポットチェック)を通過したもののみ掲載。裏取りが1系統に留まる項目は本文中に「単一系統」「推定」と明示している。
+</footer>
+</div>
+
+<script>
+(function(){
+'use strict';
+var LAKE_D = "M913.8,235.8L882.3,221.7L879.9,217.5L884.8,208.7L883.9,199.2L889.2,191.3L884.8,169.5L889.0,165.1L887.8,153.0L892.9,147.0L894.6,121.7L887.1,116.9L880.8,85.6L876.4,80.5L877.5,71.7L853.0,72.6L845.1,82.3L835.0,84.9L819.6,62.2L797.7,65.9L793.0,72.4L757.2,52.8L745.4,49.9L688.6,70.3L677.7,77.7L673.0,93.2L646.7,97.9L621.0,90.7L605.6,68.9L599.7,53.3L573.7,40.0L557.5,40.9L508.8,48.6L484.3,42.3L467.0,50.5L468.0,57.5L465.8,61.5L455.3,60.9L451.1,72.2L461.4,81.1L450.5,147.2L436.3,160.3L425.9,178.0L409.0,187.4L383.4,223.4L379.9,242.5L394.6,254.6L395.0,264.6L387.6,273.1L387.1,280.6L380.1,287.5L340.4,300.6L336.2,312.6L311.9,341.1L316.1,349.0L313.1,364.0L290.2,371.2L261.2,366.4L234.1,378.9L209.7,367.7L187.6,379.9L178.6,391.3L163.4,402.9L144.7,404.5L130.4,399.1L130.4,383.0L116.6,370.1L104.3,367.4L91.2,368.1L83.1,372.0L78.2,382.5L75.7,402.4L56.3,445.2L69.9,470.6L66.4,497.9L53.4,522.5L40.0,561.6L41.1,576.6L78.5,608.0L103.0,641.1L113.1,678.0L106.2,717.4L122.4,751.0L116.3,789.3L101.2,806.0L100.9,823.5L106.5,831.2L110.0,848.0L114.7,852.3L139.7,849.1L225.8,852.1L350.7,829.4L382.2,816.4L401.1,801.1L422.3,775.4L437.8,742.4L439.6,540.9L431.9,508.2L423.3,437.5L427.3,418.8L456.9,319.5L480.0,275.5L524.8,239.8L572.9,219.3L680.0,214.7L763.4,245.8L791.6,251.6L822.0,275.0L834.1,275.2L867.5,257.3L876.6,255.3L909.9,261.7L917.5,261.3L920.0,237.2L913.8,235.8Z";
+document.getElementById('lakepath').setAttribute('d', LAKE_D);
+document.getElementById('lakepath2').setAttribute('d', LAKE_D);
+document.getElementById('lakepath3').setAttribute('d', LAKE_D);
+
+var PN={1:'ボート乗り場周辺',2:'国道側(南岸)',3:'北岸のオーバーハング',4:'くびれ(最狭部)',5:'奥・ダムサイト(丸沼側インレット)',6:'流れ込み(北岸の小沢)',7:'岬(候補3点)',8:'沼のど真ん中',9:'手前左側のシャロー',10:'スカムライン(その日の風と放水で動く)'};
+var NOMAP={6:1,9:1,10:1};
+var YEAR=2026;
+var SEASONS=[
+ {label:'2026年(偶数年)= 通年営業', from:[5,16], to:[10,31], closedWeekdays:[],
+  note:'期間中毎日営業(定期の定休日なし)。ただしイベント日の臨時休業実績あり(2024-08-24 エクステラ丸沼のため大尻沼も釣り禁止)。奇数年は禁漁年で、5月中旬〜6月末の土日限定14日間の特別解禁のみ。'}
+];
+
+var PHASES=[
+ {id:'off',chip:'シーズンオフ',from:[11,1],to:[5,15],closed:true,
+  name:'禁漁期(11/1〜翌5月中旬)+奇数年の禁漁年',
+  msg:'大尻沼の釣りは5月中旬〜10/31(偶数年)のみ。奇数年は禁漁年で、5月中旬〜6月末の土日限定14日間の特別解禁だけになる。翌年の内容は3〜4月に環湖荘ブログ「丸沼釣り日記」で告知され、予約は5月1日8:00から電話で先着順。例年12月中旬に結氷し5月上旬に解氷、冬季の積雪は3m。国道120号(金精道路)の冬期閉鎖は2025-26が2025-12-25正午〜2026-04-24正午(金精トンネル〜丸沼スキー場入口12.1km)=単年実績で、複数年の平年パターンは未取得。群馬側からは閉鎖区間外だが日光側からは通行できない。2026-27冬の日程は2026-09-05時点で未発表(例年10月中旬に群馬県道路管理課が発表)。'},
+
+ {id:'p1',chip:'解禁直後',from:[5,16],to:[5,31],
+  name:'解禁〜春ゼミ立ち上がり(沈める釣りと表層の端境)',
+  temps:'大尻沼の実測なし。参考=丸沼(同管理者)で2026-04-25朝8時に気温3℃・水温9℃、2026-05-30朝4℃。歴史値(丸沼ダム築造前・1913〜17年)の5月下旬は表層13.0〜15.5℃/5m 10.8〜12.0℃',
+  tana:'表層と中層の端境',
+  tanaNote:'解禁直後は「表層はまだ早い」年があり、奥側の岸際・ボトム寄りに良型が着く。春ゼミが鳴き始めると一気に表層へ。棚のメートル値は全出典に存在しないため書かない',
+  flyPts:[5,2,3],lurePts:[1,2,5],
+  fly:['奥側(東端・ダムサイト)の岸際を流して良型ヒレピンを拾う(2024-05-18解禁日の管理者記述「特に奥側で良型のヒレピンが釣れていましたよ!!」「流石にまだ表層は早かったようです」)',
+   '春ゼミが鳴き出したら即セミフライへ切替(2026-05-19鳴き始め→05-31本格化、2026-05-31は蝉フライで午前中だけ8本・ほとんど50cmオーバー)',
+   'サイトが効かない時間は沖のスカムラインやライズを探し、ティペット3Xでフォームビートル系を置く'],
+  lure:['春ゼミ前はスプーン・ミノーが無反応の日があり、バイブレーション系(バベコン)でようやくアタリが出た実測あり(2026年5月末)',
+   'ミノー(KEN-craft LuiceCreak F 等)で朝一に40UP=アベレージ。丸沼からの放流でカレントが出たらスプーンのダウンで40UP(2024-05-24)',
+   '午後の暴風時は風裏へ逃げ込む(2024-05-24に風裏で手尺50UP)'],
+  records:['2024-05-18(解禁日): 奥側で良型ヒレピン、表層はまだ早い',
+   '2024-05-24: 朝一ミノーで40UP、放流カレント時にスプーンのダウンで40UP、午前は1匹/時間。午後暴風→風裏で手尺50UP',
+   '2026-05-26(WILD-1): 周囲ほぼ全てのオーバーハングへ蝉ルアーを打ち込む展開。午前は陽が出て春蝉が鳴き、午後曇ったら止んだ',
+   '2026-05-31: 蝉フライで午前中だけで8本、ほとんどが50cmオーバー',
+   '2026-05末(釣りバカてつch): セミ未鳴き。スプーン・ミノー・ボトムねちねち全て無反応、バベコンにアタリ'],
+  warn:'解禁直後の土日は満艘になりやすい(平日は空きあり)。低水温期は落水=低体温症リスクが高い(同管理者が丸沼で掲示する目安: 水温10〜15℃で意識不明まで1〜2時間・生存1〜6時間。大尻沼の解禁期も同水温帯と推定)。朝は氷点近くまで冷えることがあり防寒必須'},
+
+ {id:'p2',chip:'春ゼミ最盛',from:[6,1],to:[6,30],
+  name:'春ゼミ・トップウォーター最盛期(一年で最も分かりやすい時期)',
+  temps:'大尻沼の実測なし。2026-06-24(水)に「さすがに朝は寒い、12℃」=気温の記録。歴史値(ダム築造前)の6月: 表層10.5〜19.0℃/5m 9.0〜13.5℃、15℃層深度3.3〜3.6m(14℃層は4.4〜4.5m)。丸沼高原の2025年6月は毎朝5時の平均気温14.2℃',
+  tana:'完全にトップ',
+  tanaNote:'水面スレスレを回遊する個体を目で探して撃つサイトが主軸。深さの数値記録は皆無で、あるのは距離だけ —「10m以内だとボートを意識して喰わない、それ以上なら50cm以内に正確なキャストで躊躇なく喰う」(2024-06)/「見つけた魚に正確に1m手前に入れないと見切る」(2026-06-30)',
+  flyPts:[8,3,2,4],lurePts:[2,1,4,5],
+  fly:['サイト: 15m以上先の魚を見つけ、進行方向90cm先(魚が2〜3秒で到達する位置)へリーチキャスト。フォルスキャストは少なめ',
+   'セミフライ(#4)を主軸に、渋くなったらフライングアント#11など小さめへ落として数を伸ばす(2026-06-30: シンガマボディ#8で3本、セミ#4で3本、フライングアント#11で5本=計11本)',
+   'スレたらパターンを替える。モホーク・ジバチが有効、蛍光色のパラシュートポストは嫌がる。ロッドは4番だとパワー不足で5〜6番'],
+  lure:['蝉ルアー(スミス 美蝉/大美蝉、ティムコ シケイダーオリジン)を回遊魚の進行方向へ着水音ソフトに打つ。「スーッと寄ってきて喰う」か「下からブワッと浮いてきてバイト」の2パターン',
+   'バシャッと出た瞬間に合わせず一呼吸置く。反転を見届けるか、ラインが引かれてから合わせる',
+   '蝉で出るが乗らない時はシャロークランクへ即交換(2024-06-08: 交換直後に50cmのニジマス)。沖の水面がざわついたら3.5gスプーンの表層引き(2023-06-18: 50cm級含む4連発)'],
+  records:['2020-06下旬: 船着場から北側の面50mのひと流しで13本、11:30時点で約30本、最大65cm・最小40cm',
+   '2024-06-08(環湖荘スタッフ 9:30〜12:00): シャロークランクで約50cm、セミで50cm後半のヒレピン。ダムサイトまで全体的に高活性',
+   '2024-06下旬(Hermit): ターンオーバーで水が抹茶色、グリーンの水域を探して奥へ。10時頃から回遊開始。50〜60cm台半ばをツ抜け直前まで',
+   '2026-06上旬: 1艘2名で20本、ほとんど50cmオーバーのヒレピン+50cmオーバーのブラウン2本',
+   '2026-06-30(Hermit): 11本、50〜60cm。木の下の回遊が少なく沼のど真ん中のライズ狙い。セミフライは10分に1回バイトするがフッキング率3割'],
+  warn:'C&Rが続くのでスレの進行が速い(管理者も6月中旬に「段々すれてきている個体が増えている」)。放水が無く水が動かない日は回遊が減って渋くなる。魚が太いので4番ロッドではパワー不足、ティペットはリトリーブ4X/ドライ6Xより細くしない。奇数年(禁漁年)の特別解禁はこの6月末で打ち切り'},
+
+ {id:'p3',chip:'盛夏・トンボ',from:[7,1],to:[8,31],
+  name:'盛夏=避暑シーズン。セミ+トンボパターン、放水と夕立が効く',
+  temps:'大尻沼の実測は2022-08-06の水温19℃(表層推定・気温15℃〜)の1点のみ。歴史値(ダム築造前)の7月中旬: 表層14.0〜17.4℃/5m 14.0〜14.6℃/10m 10.8〜12.3℃/20m 8.0〜10.0℃。参考=丸沼は2024-07-30 15時で21℃、2026-08-27で20℃切る程度',
+  tana:'基本は表層',
+  tanaNote:'晴天無風の日中は魚が沈んで水面に出ないため「少し沈める」「カウントダウン」で探る切替が必要。それ以上の深さの数値は記録がなく書けない',
+  flyPts:[10,8,5,3],lurePts:[2,3,1,5],
+  fly:['セミフライ+トンボパターンの併用。2024-07下旬は「トンボパターン真っ盛り」でフライ1人15本',
+   '沖のスカムライン(浮きゴミ帯)でテレストリアルを啄む個体を狙う。慣れない人は沖にアンカーを打って投げる方法が有効',
+   '曇天・雨天が狙い目。「雨がブラインドになり湖面はレインボーを見つけやすくなる」。2024-08-08は連日の夕立+丸沼からの放水で貸切1人が全てドライで35本'],
+  lure:['蝉ルアー(スミス 美蝉/大美蝉、ティムコ シケイダーオリジン/タイニーシケイダー、メガバス シグレのファー付き)は8月でも有効。2020-08は50cmオーバー多数',
+   'トンボパターン: THタックル 濱トンボに「魚が躊躇なく出てくれた」(2026-08中旬、ブラウンも同ルアー)',
+   'セミで10回以上出るのに乗らない日は「少し沈めると直ぐにヒット」(2024-07下旬の管理者情報)。食い渋り用にリップレスミノーを持つ'],
+  records:['2022-07-12(Hermit): 貸切2艇、外気18→22℃。回遊少なく岸際30cmの引き波を拾う→丸沼側インレットのスカムラインでライズ連発。9本(最低50cmアップ、最大60cm超)、15時雷雨で終了',
+   '2024-07-19: 「少し濁り気味」で魚がやや深い層、水面の毛鉤を見ない',
+   '2024-07-29〜30: トンボパターン最盛。フライ1人15本',
+   '2024-08-08: 連日の夕立+丸沼放水で高活性、貸切1人が全てドライで35本(本調査で確認した1日1人最多)',
+   '2022-08-06: 晴・気温15℃〜・水温19℃。出船3人のみ。ブラインドで岸際からブレイクラインをドライで攻めて出る',
+   '2026-08-08(土): 昼から土砂降り+雷の中「デカいの3尾」(ニジマス・ブラウン)',
+   '2026-08中旬(ワンダーフィールド): トップのみで2人11匹'],
+  warn:'このフェーズは偶数年(通年営業の年)のみ — 奇数年は5月中旬〜6月末の土日14日間だけで7〜10月の営業が無く、この時期の釣行計画は成立しない(2027年は禁漁年の見込み・公式未発表)。日陰がないので帽子・水分補給は絶対。雷雨・夕立が頻発する15時前後に実際の撤退例が複数。晴天無風は最も釣れない条件。8月はイベントで大尻沼も釣り禁止になる年がある(2024-08-24)ので事前確認'},
+
+ {id:'p4',chip:'秋・カメムシ',from:[9,1],to:[10,31],
+  name:'秋のドライ第2ピーク(カメムシ・落ち葉)と、シーズン最スレ期',
+  temps:'大尻沼の実測なし。2024-09-10は「丸沼周辺は日中25〜6℃でピーカン」「水温はやや高めでお魚の浮きはこれから」(定性)。2024-09-11は気温19〜29℃。丸沼高原の2025年10月は毎朝5時平均9.1℃。10月下旬には雪がちらつく日がある(2020-10-30)',
+  tana:'序盤は沈みがち→カメムシで表層へ',
+  tanaNote:'9月前半は高水温で魚が沈みがち。カメムシが飛来し始めると表層に戻る。晴天無風はドライ全滅→インターミディエイト+マラブーのカウントダウンに切替えた実測あり。ここでも深さの数値記録はない',
+  flyPts:[8,10,7,5],lurePts:[2,1,7],
+  fly:['カメムシ(フォームビートル/フォームカメムシ #8〜#10、オレンジ・チャート)。「カメムシも色々な種類がいて色・サイズを合わせた方が明らかに反応がいい」(2024-10)',
+   'フォームへの反応が悪い日はフライングアント#12→クリンクハマー#14など小さいパターンへ。2020-09-29はクリンクハマー#14が最良。上州屋2022-09はマシュマロパターンが最良',
+   '落ち葉と虫の吹き溜まりが湖のど真ん中にできる日は後半の魚が全て真ん中で、岸際よりサイズが良い。晴天無風でドライが全滅したらファストインターミディエイト+マラブーのカウントダウン(2024-09-11に30cmと50cmオーバー)'],
+  lure:['秋のルアー記録は薄い(正直に)。2020-10-30は雪ちらつく中ショートバイトばかりでスミス ヘブンで1匹のみ',
+   'ブラウンはかなりのシャローレンジで掛かる(2020-09)。リリース直後は底でじっとして深場へ消える',
+   '大きめミノー(11〜13cm)で岸のブレイク絡みのシャローを撃つパターンはブラウン向き(2012年9月の記録=フェーズ範囲外の参考)'],
+  records:['2020-09-29(Hermit): 出船4隻。9本、40〜50cm半ば。ボートランプ近くは全く釣れず丸沼寄りのみ反応。ブラウン1尾(「ここまで綺麗なブラウンは大尻沼では8年振りぐらい」)',
+   '2022-09(Hermit・台風接近日): 風速1〜2m、他に釣り人なし。フォームビートル#10〜8のみで湖の真ん中の個体の1m先へ。40〜60cm弱を20本弱。15時以降北西風で急に冷えて食い渋り',
+   '2022-09-29(上州屋): 1日通してドライの反応が悪く魚は深め。6バイト3キャッチだが40cm以上の良型ばかり。最初のキャッチは12時',
+   '2024-09-10(Hermit): 平日7人、日中25〜26℃ピーカン。35〜40cm台多数、居つきの50〜60cm台はモホーク。ドライの反応が良かったのは10:30〜12:30、合計8本、3Xを切られたのが3本',
+   '2024-09-11: 晴〜曇〜雨、19〜29℃。晴れ無風はドライ全滅→午後に風+曇りでインターミディエイト+マラブーで30cmと50cmオーバー。14時雷雨で撤収',
+   '2024-10上旬: 開始直後のみ高活性、以後ライズほぼなし。オレンジ/チャートのフォームカメムシ#10で唯一の良型',
+   '2024-10中旬: 40cm強〜50cm、初日4匹・二日目6匹。紅葉2週遅れでドライのピークはこれから'],
+  warn:'このフェーズは偶数年のみ(奇数年は7〜10月の営業が無い)。C&Rが繰り返された結果、シーズン後半は口が真っ赤な個体がほとんどで最もスレている。10月は高標高部で降積雪の恐れがあり冬タイヤ・チェーン携行。帰路の紅葉渋滞が「半端ない」。10月31日で営業終了'}
+];
+
+var WINDS=[
+ {id:'c1',label:'風が強い',advice:'大尻沼は丸沼より小さく谷間にあるため風の影響が極めて少ない。南風が強ければ南岸へ、北風なら北岸へ寄る。それでもボートポジションが取りづらい時は、魚が回る場所にアンカリングして遠い魚を探す。風で流されながらオーバーハングの下を撃つ流し釣りも有効。',ev:'Hermit 2022-09-22/Hermit 2024-06-26/管理者 2024-06-08'},
+ {id:'c2',label:'無風・ピーカン',advice:'最も釣れない条件。「風が無く晴れてると釣れる気しないです」。ドライが全滅したらファストインターミディエイト+マラブーのカウントダウンに切替える。午後に風が吹いて曇るとスイッチが入る。',ev:'チョッチの釣りブログ 2024-09-11/Hermit 2024-09-11'},
+ {id:'c3',label:'雨',advice:'積極的に狙う条件。雨がブラインドになって湖面の魚を見つけやすくなり、降雨中は簡単にヒットする。「今までどんな大雨にあっても、泥濁りになることは一度も無かった」ためドライが成立する。2024-06-23は終日土砂降りで「疲れる位の好釣果」。',ev:'Hermit 2024-06-26/Hermit 2022-09-22/管理者 2024-06-23'},
+ {id:'c4',label:'曇天',advice:'魚を探しにくいがドライへの反応ははるかに良い。曇天下で15m以上先の魚を見つけられるかが鍵。',ev:'Hermit 2020-06-25'},
+ {id:'c5',label:'前日に雨(濁り)',advice:'出典が割れる条件。前日の雨で濁りがきつく「過去一活性が低くライズも無し」だった日(2024-06-26頃)と、雨で一気に高活性化した日(2024-06-23)の両方がある。濁り気味の日は魚がやや深い層を泳ぎ水面のフライを見ないという観察も。まずトップで探り、反応が無ければ少し沈める。',ev:'amavel1058 2024-06-27/管理者 2024-06-23/きょうも鱒釣り 2024-07-19'},
+ {id:'c6',label:'丸沼からの放水がある',advice:'最良の条件のひとつ。水が動いてカレントが出ると回遊が活発になり高活性。2024-08-08は放水+夕立で1人35本。放水口(東端・ダム直下)付近やそこから伸びるスカムラインを狙う。ルアーはスプーンのダウンが効く。※ダム直下は「牧水の渡し」(ドラム缶いかだ)のワイヤーが横断しているので接近時は注意(要現地確認)。※ダム直下・取水堰前が立入可か(禁漁区・立入禁止区域の線引き)は公式文に記載がなく未確認 — 接近可否は受付時に確認。放水中はカレントが出るので流れにも注意。',ev:'管理者 2024-08-08/spearhead034 2024-05-24/Hermit 2022-07-13'},
+ {id:'c7',label:'放水がなく水が動かない',advice:'回遊するレインボーが見られず渋くなる。大雨でも放水が無ければベストとは言えない。岸際の引き波(30cm程度の小さな動き)を拾うか、スカムラインを丹念に探す。',ev:'Hermit 2026-07-02/Hermit 2022-07-13'},
+ {id:'c8',label:'減水している',advice:'水位は取水堰の運用で人為的に大きく変動する。2020年は5月末〜6月1日が減水の底だったが、「減水のおかげか入れ食い」「再度大減水してますが、釣果は関係なくトップで釣れている」と釣果への悪影響は報告されていない。荷物の運搬距離が延びる点だけ覚悟する。',ev:'管理者 2020-05-30/2020-06-19/2020-07-04'},
+ {id:'c9',label:'ターンオーバー(水が抹茶色)',advice:'抹茶色の水域はサイトフィッシングが困難。ブルーグリーンの水域との境目が時間とともに移動するので、グリーンカラーの場所を中心に魚を探して移動する(2024年6月下旬は湖の奥側へ)。※釣行者の推測であり実測ではない。',ev:'Hermit 2024-06-26'},
+ {id:'c10',label:'高水温(9月前半)',advice:'「水温はやや高めでお魚の浮きはこれから」。カメムシの飛来前で表層が本番前の時期。放流とみられる35〜40cm台が浅く回るので、まずそのサイズで感触を掴み、時間経過とともに動き出す居つきの50〜60cm台をモホーク等の大きめパターンで狙う。',ev:'Hermit 2024-09-11'},
+ {id:'c11',label:'夕方',advice:'営業が17:00までのため夕マズメは釣れない。管理者自身が「夕マズメの時間に終了するのは心苦しいところですが」と書いている。逆に受付が7:30と遅く朝マズメも無いので、10時〜正午の時合に賭ける組み立てにする。',ev:'管理者 2024-06-19/Hermit 2024-06-26'},
+ {id:'c12',label:'雷',advice:'実際に15時前後の雷雨で撤収した記録が複数(2022-07-12、2024-09-11、2026-08-08)。ボート上は逃げ場がないので、遠雷の段階で岸に寄せる判断を。なお公的な雷頻度データは存在しない。',ev:'Hermit 2022-07-13/チョッチ 2024-09-12/X @eastofeden34n 2026-08-11'},
+ {id:'c13',label:'濃霧・台風接近',advice:'同管理者は濃霧時はボートを出さず、台風接近時は前日に「ボートは出せない可能性が高い」と告知する。大尻沼はボート釣りのみなので、その日は釣り自体が不可になる。当日朝の可否はブログか電話で確認。',ev:'管理者 2026-05-23(濃霧)/2026-06-02(台風)'},
+ {id:'c14',label:'スレている(シーズン後半)',advice:'見つけた魚の正確に1m手前へ入れないと見切る。フライを小さくする(フライングアント#11、クリンクハマー#14)と数は伸びるが魚のサイズも落ちる。「皆が皆して同じもの投げ過ぎている」フォームフライを外し、別系統のパターンへ替えるのが効く。',ev:'Hermit 2026-07-02/Hermit 2020-09-30/管理者 2026-06-19'}
+];
+
+var state={phase:null,style:'fly'};
+var qs=new URLSearchParams(location.search);
+
+function inRange(m,d,from,to){
+  var v=m*100+d, a=from[0]*100+from[1], b=to[0]*100+to[1];
+  return a<=b ? (v>=a&&v<=b) : (v>=a||v<=b);
+}
+function phaseForToday(){
+  var now=new Date(), m=now.getMonth()+1, d=now.getDate();
+  for(var i=1;i<PHASES.length;i++){ if(inRange(m,d,PHASES[i].from,PHASES[i].to)) return PHASES[i]; }
+  return PHASES[0];
+}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function li(a){return a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('');}
+
+function seasonFor(y,m,d){
+  if(y!==YEAR) return null;
+  for(var i=0;i<SEASONS.length;i++){
+    var s=SEASONS[i];
+    if(inRange(m,d,s.from,s.to)){
+      // closedWeekdays: 0=日〜6=土。2026は毎日営業のため空配列。奇数年の土日限定運用に流用する場合はここが効く
+      if(s.closedWeekdays && s.closedWeekdays.indexOf(new Date(y,m-1,d).getDay())>=0) return null;
+      return s;
+    }
+  }
+  return null;
+}
+function isOpen(y,m,d){ return !!seasonFor(y,m,d); }
+function nextSeasonStart(from){
+  for(var i=0;i<SEASONS.length;i++){
+    var s=SEASONS[i];
+    var dt=new Date(YEAR,s.from[0]-1,s.from[1]);
+    if(dt>=from) return s;
+  }
+  return null;
+}
+function renderOpenState(){
+  var now=new Date();
+  var today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  var el=document.getElementById('openstate');
+  var wd=['日','月','火','水','木','金','土'];
+  var s=seasonFor(now.getFullYear(),now.getMonth()+1,now.getDate());
+  var tail='<p class="nextopen"><b>完全予約制・電話のみ</b>(0278-58-2002/受付7:30〜) — 予約なしの飛び込みは不可。当年の予約受付は5月1日8:00開始で先着順。土日は事前予約必須、平日は前日予約でほぼ可。'+
+    '<br>⚠ 定期の定休日はないが<b>イベント日の臨時休業実績あり</b>(2024-08-24)。濃霧・台風の日は出船中止になる。当日の可否は電話かブログで確認。</p>';
+  if(now.getFullYear()!==YEAR){
+    el.innerHTML='<span class="openbadge is-unknown">本日'+(now.getMonth()+1)+'/'+now.getDate()+'('+wd[now.getDay()]+')の営業可否は本図では判定できません — 本図は'+YEAR+'年シーズン版です</span>'+
+     '<p class="nextopen">大尻沼は<b>隔年営業</b>(偶数年=5月中旬〜10/31の通年/奇数年=禁漁年だが5月中旬〜6月末の土日限定14日間の特別解禁)。当年の営業形態は<b>公式未発表の推定</b>にすぎないため、3〜4月の <a href="https://kankoso.naturum.ne.jp/" rel="noopener" style="color:var(--gold)">丸沼釣り日記</a> の当年告知と電話(0278-58-2002)で必ず確認すること。</p>'+tail;
+    return;
+  }
+  if(s){
+    el.innerHTML='<span class="openbadge is-open">◎ 本日'+(now.getMonth()+1)+'/'+now.getDate()+'('+wd[now.getDay()]+')は2026年の営業期間内</span>'+
+     '<p class="nextopen">'+esc(s.label)+' — <b>'+s.from[0]+'/'+s.from[1]+'〜'+s.to[0]+'/'+s.to[1]+'</b>。'+esc(s.note)+'</p>'+tail;
+  } else {
+    var nx=nextSeasonStart(today);
+    var nxTxt;
+    if(nx){
+      var nd=new Date(YEAR,nx.from[0]-1,nx.from[1]);
+      var days=Math.round((nd-today)/86400000);
+      nxTxt='<p class="nextopen">◎ 2026年の解禁は <b>'+nx.from[0]+'月'+nx.from[1]+'日('+wd[nd.getDay()]+')</b>'+(days>0?' — あと'+days+'日':'')+'。予約は5月1日8:00から電話で先着順(0278-58-2002)。</p>';
+    } else {
+      nxTxt='<p class="nextopen">2026年の営業は10/31で終了。<b>2027年は隔年パターン上「禁漁年」の見込み</b>(5月中旬〜6月末の土日限定14日間の特別解禁のみ) — ただし公式未発表なので、翌年の内容は3〜4月の <a href="https://kankoso.naturum.ne.jp/" rel="noopener" style="color:var(--gold)">丸沼釣り日記</a> の告知と電話で確認すること。</p>';
+    }
+    el.innerHTML='<span class="openbadge is-closed">本日('+(now.getMonth()+1)+'/'+now.getDate()+')は営業期間外</span>'+nxTxt;
+  }
+}
+function renderCal(){
+  var wrap=document.getElementById('calwrap');
+  var now=new Date();
+  var tm=(now.getFullYear()===YEAR)?(now.getMonth()+1):0;
+  var s=SEASONS[0];
+  var months=[4,5,6,7,8,9,10,11];
+  var html='', nextMarked=false;
+  var todayOpen=tm?isOpen(YEAR,tm,now.getDate()):false;
+  months.forEach(function(m){
+    var lastDay=new Date(YEAR,m,0).getDate();
+    var openStart=isOpen(YEAR,m,1), openEnd=isOpen(YEAR,m,lastDay);
+    var lab, cls='cd num';
+    if(openStart&&openEnd){ lab='営業'; }
+    else if(openStart||openEnd){ lab= (m===s.from[0]) ? ('一部 '+s.from[1]+'日〜') : ('一部 〜'+s.to[1]+'日'); }
+    else { lab='休'; cls+=' off'; }
+    if(tm){
+      if(m<tm) cls+=' past';
+      else if(m===tm) cls+=' today';
+      else if(!openStart&&!openEnd){ /* keep */ }
+    }
+    if(tm && !nextMarked && !todayOpen && (openStart||openEnd) && (m>tm || (m===tm && !openStart))){ cls+=' next'; nextMarked=true; }
+    html+='<div class="calm"><h4 class="num">'+m+'月</h4><div class="cald"><span class="'+cls+'">'+lab+'</span></div></div>';
+  });
+  if(!tm) html='<p class="calnote"><b>'+YEAR+'年の実績です(当年ではありません)</b> — 当年の営業月は環湖荘の当年告知と電話で確認すること。</p>'+html;
+  wrap.innerHTML=html;
+}
+
+function render(){
+  var p=state.phase;
+  document.querySelectorAll('#phasechips .pbtn').forEach(function(b){var on=b.dataset.phase===p.id; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');});
+  document.querySelectorAll('#stylerow .pbtn').forEach(function(b){var on=b.dataset.style===state.style; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');});
+  var v=document.getElementById('verdict');
+  if(p.closed){
+    v.innerHTML='<p class="closed"><b>'+esc(p.name)+'</b> — '+esc(p.msg)+'</p>';
+    highlight([]);
+    return;
+  }
+  var pts=state.style==='fly'?p.flyPts:p.lurePts;
+  var tac=state.style==='fly'?p.fly:p.lure;
+  var offmap=pts.filter(function(n){return NOMAP[n];});
+  var chips=pts.map(function(n){return '<span class="vpt"><b>'+n+'</b> '+esc(PN[n])+(NOMAP[n]?'(地図なし)':'')+'</span>';}).join('');
+  v.innerHTML=
+   '<div class="verdict">'+
+   '<div class="vcell"><h4>釣りの軸(深さでなく距離)</h4><div class="tanabig">'+esc(p.tana)+'</div><p class="tananote">'+esc(p.tanaNote)+'</p><p class="vtemps num">'+esc(p.temps)+'</p></div>'+
+   '<div class="vcell"><h4>有望エリア — '+esc(p.name)+'</h4><div class="vpts">'+chips+'</div>'+
+   '<p class="vsub">位置は釣行記の記述からの推定(地図の点灯マーカー参照)。'+(offmap.length?'<b>「地図なし」</b>は位置根拠が無い/その日ごとに動くため地図に描いていないポイント。':'')+'当日の正解は環湖荘での聞き込みが最速。</p></div>'+
+   '<div class="vcell"><h4>戦術('+(state.style==='fly'?'フライ':'ルアー')+')</h4><ul class="vlist">'+li(tac)+'</ul>'+(p.warn?'<p class="vwarn">⚠ '+esc(p.warn)+'</p>':'')+'<p class="vsub">公式必須: <b>ライフジャケット着用</b>・<b>フックはバーブレス</b>・オールキャッチ&amp;リリース/ウェーダー着用での乗船は控える/撮影は魚を船上に上げずネット内。</p></div>'+
+   '<div class="vev"><b>この時期の実測記録:</b> '+p.records.map(esc).join(' / ')+'</div>'+
+   '</div>';
+  highlight(pts);
+}
+function highlight(pts){
+  for(var i=1;i<=10;i++){
+    var g=document.getElementById('pt'+i);
+    if(!g) continue;
+    g.classList.remove('hot','dim');
+    if(pts.length){ g.classList.add(pts.indexOf(i)>=0?'hot':'dim'); }
+  }
+}
+var chipsRow=document.getElementById('phasechips');
+PHASES.forEach(function(p){
+  var b=document.createElement('button');
+  b.type='button'; b.className='pbtn'; b.dataset.phase=p.id; b.textContent=p.chip; b.setAttribute('aria-pressed','false');
+  b.addEventListener('click',function(){state.phase=p;render();});
+  chipsRow.appendChild(b);
+});
+document.querySelectorAll('#stylerow .pbtn').forEach(function(b){
+  b.addEventListener('click',function(){state.style=b.dataset.style;render();});
+});
+var wr=document.getElementById('windrow'), wo=document.getElementById('windout');
+WINDS.forEach(function(w){
+  var b=document.createElement('button');
+  b.type='button'; b.className='pbtn'; b.dataset.wind=w.id; b.textContent=w.label; b.setAttribute('aria-pressed','false');
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#windrow .pbtn').forEach(function(x){var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false');});
+    wo.hidden=false;
+    wo.innerHTML='<b>'+esc(w.label)+'</b> → '+esc(w.advice)+'<span class="we">出典: '+esc(w.ev)+'</span>';
+  });
+  wr.appendChild(b);
+});
+var qp=qs.get('phase');
+if(qs.get('style')==='lure') state.style='lure';
+var forced=null;
+if(qp){ PHASES.forEach(function(p){ if(p.id===qp) forced=p; }); }
+state.phase=forced||phaseForToday();
+var now=new Date();
+var wd=['日','月','火','水','木','金','土'][now.getDay()];
+document.getElementById('todayline').textContent='— 今日は'+(now.getMonth()+1)+'月'+now.getDate()+'日('+wd+')。自動判定: '+state.phase.name;
+renderOpenState();
+renderCal();
+render();
+if(now.getFullYear()!==YEAR){
+  var yn=document.createElement('p');
+  yn.className='yearnote';
+  yn.textContent='⚠ この図の営業期間・戦術データは'+YEAR+'年(偶数年=通年営業の年)シーズン版'+(now.getFullYear()>YEAR?'(過年度)。大尻沼は隔年営業で、奇数年は5月中旬〜6月末の土日14日間の特別解禁だけになる。当年の営業形態は必ず環湖荘の当年告知(丸沼釣り日記)と電話で確認すること — 本図の日程を当年に流用しないこと。':'。');
+  var os=document.getElementById('openstate');
+  os.parentNode.insertBefore(yn,os);
+}
+})();
+</script>
+
+</body>
+</html>
