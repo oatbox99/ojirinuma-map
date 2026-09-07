@@ -47,7 +47,7 @@
       --shore:#66a8b8;
       --series:#4396b8; --warn:#b98220;
       --est:#c78e2d; --est-ink:#c78e2d; --est-bg:rgba(185,130,32,.14);
-      --ok:#6da166; --ng:#c06a55; --ng-bg:rgba(192,106,85,.12);
+      --ok:#6da166; --ng:#d4826c; --ng-bg:rgba(212,130,108,.12);
       --halo:#0a1b22;
     }
   }
@@ -60,7 +60,7 @@
     --shore:#66a8b8;
     --series:#4396b8; --warn:#b98220;
     --est:#c78e2d; --est-ink:#c78e2d; --est-bg:rgba(185,130,32,.14);
-    --ok:#6da166; --ng:#c06a55; --ng-bg:rgba(192,106,85,.12);
+    --ok:#6da166; --ng:#d4826c; --ng-bg:rgba(212,130,108,.12);
     --halo:#0a1b22;
   }
   *{box-sizing:border-box}
@@ -282,7 +282,8 @@
     </div>
     <p class="ln-today" id="ln-today"></p>
   </nav>
-  <script>/* LAKENAV-STATUS v1 */
+  <script>/* JST-TODAY v1 */function TODAY(){var n=new Date();return new Date(n.getTime()+(n.getTimezoneOffset()+540)*60000);}</script>
+<script>/* LAKENAV-STATUS v1 */
 (function(){
   /* 5湖の当日可否。各ページの SEASONS/OPEN と同じ 2026年日程(年次更新は5ページ同時に行う。navtest.sh で全日一致を検証) */
   var Y=2026;
@@ -311,7 +312,7 @@
   }
   function render(){
     if(typeof document==='undefined'||!document.querySelectorAll) return;
-    var now=new Date(), y=now.getFullYear(), m=now.getMonth()+1, d=now.getDate();
+    var now=TODAY(), y=now.getFullYear(), m=now.getMonth()+1, d=now.getDate();
     var wd=['日','月','火','水','木','金','土'];
     var line=document.getElementById('ln-today');
     var tabs=document.querySelectorAll('.ln-tab[data-lake]');
@@ -340,6 +341,7 @@
   render();
 })();
 </script>
+<script>/* DAY-ROLLOVER v1 */(function(){var d0=TODAY().toDateString();function chk(){if(TODAY().toDateString()!==d0)location.reload();}window.addEventListener('pageshow',chk);document.addEventListener('visibilitychange',function(){if(!document.hidden)chk();});})();</script>
   <div class="headmeta">
     <span class="chip"><b>2026シーズン</b> 5/16〜10/31・期間中毎日(偶数年＝通年の年)</span>
     <span class="chip"><b>釣法</b> ルアー・フライのボート釣りのみ/岸釣り禁止/バーブレス・全魚C&amp;R</span>
@@ -846,8 +848,8 @@
 
 <footer>
   <b>出典</b> — 2026年のルール・料金・期間・予約: 環湖荘 年間大物賞サイト「大尻沼について」(marunuma-omonosho.jimdofree.com、2026-09-05/09-06再取得・逐語照合)/解禁告知・釣果・放流・当日可否: 丸沼釣り日記(丸沼温泉環湖荘スタッフブログ・kankoso.naturum.ne.jp、2020-05〜2026-09の月別アーカイブを走査)/アクセス・駐車場: marunuma.com・marunuma.jp/漁業権: 水産庁 群馬県漁業権情報一覧(区第14号)/諸元: 第2回(1980)・第3回(1987)・第4回(1993)自然環境保全基礎調査 湖沼調査報告書、『日本の湖沼環境』環境庁1989、『日本の湖沼と渓谷 5関東』1987、『群馬の湖沼』上毛新聞社1980(ja.wikipedia 経由)、国土地理院 調査実施湖沼一覧/水温・水質: 鳥居菅生「初夏の湖沼水温」農業土木研究10(2)1938(原データ=田中阿歌麿、丸沼ダム築造前)、吉村信吉「日本の湖水の化学成分III 塩化物」陸水学雑誌3(3)1934/丸沼ダム: 土木学会 選奨土木遺産解説シート・ダムの訪問記(一之瀬発電所取水口)・文化遺産見学案内所(牧水の渡し)/実釣記録: Hermit BLOG(2018/2020/2022/2024/2026 計9本)・WILD-1高崎店・つり具の上州屋 東大和店(2022-09-29)・ALFRED(2019-06)・サーフェイス・アウトフィッター(2024-10)・ワンダーフィールド・チョッチの釣りブログ(2024-09-11)・fisherman-k-o・ameblo tacket2087(2022-08-06 水温)・VARIVAS パワートレイル釣行記(2016・Wayback)・水辺遍路(2018)/遊歩道: haitosu.org・みどりの風に吹かれて3(2016)/道路: 群馬県道路管理課(冬期閉鎖・雨量規制)・群馬防災情報・栃木県 道路規制情報(栃木側ゲート規制)/バス: 関越交通 湯元温泉線 2026年時刻表/熊: 群馬県 自然環境課・KumaWatch・クママップ/気温: 丸沼高原リージェントハウス 気象データ・バンク/地形・面積・距離・位置: &#169; OpenStreetMap contributors(ODbL)relation 13170738 による実測(2026-09-04取得)。
-  <br>姉妹編(5湖): <a href="https://oatbox99.github.io/marunuma-map/" rel="noopener">丸沼 一枚攻略図</a> / <a href="https://oatbox99.github.io/sugenuma-map/" rel="noopener">菅沼 一枚攻略図</a> / <a href="https://oatbox99.github.io/yunoko-map/" rel="noopener">湯ノ湖 一枚攻略図</a> / <a href="https://oatbox99.github.io/chuzenjiko-map/" rel="noopener">中禅寺湖 一枚攻略図</a>(5湖すべて2026-09-06にHTTP 200を確認済)。<b>丸沼と大尻沼は同一管理者(環湖荘 0278-58-2002)だがルール・料金・営業時間は湖ごとに別物</b>、菅沼はさらに別管理者。2026-09-05作成。全ファクトは多エージェント採掘+敵対検証(公式原文との逐語照合・引用実在スポットチェック)を通過したもののみ掲載。裏取りが1系統に留まる項目は本文中に「単一系統」「推定」と明示している。
-  <br><b>最終確認 2026-09-07</b>(公式ページの再取得は2026-09-05〜07・5湖相互リンクの HTTP 200 確認)。<b>本図は公式規則の代替ではない — 出発前に必ず公式サイト・電話で当日情報を確認すること。</b>
+  <br>姉妹編(5湖): <a href="https://oatbox99.github.io/marunuma-map/" rel="noopener">丸沼 一枚攻略図</a> / <a href="https://oatbox99.github.io/sugenuma-map/" rel="noopener">菅沼 一枚攻略図</a> / <a href="https://oatbox99.github.io/yunoko-map/" rel="noopener">湯ノ湖 一枚攻略図</a> / <a href="https://oatbox99.github.io/chuzenjiko-map/" rel="noopener">中禅寺湖 一枚攻略図</a>(相互リンクの確認日は下記「最終確認」を参照)。<b>丸沼と大尻沼は同一管理者(環湖荘 0278-58-2002)だがルール・料金・営業時間は湖ごとに別物</b>、菅沼はさらに別管理者。2026-09-05作成。全ファクトは多エージェント採掘+敵対検証(公式原文との逐語照合・引用実在スポットチェック)を通過したもののみ掲載。裏取りが1系統に留まる項目は本文中に「単一系統」「推定」と明示している。
+  <br><b>最終確認 2026-09-07</b>(公式ページの再取得 2026-09-05〜07、5湖相互リンクの HTTP 200 確認)。<b>本図は公式規則の代替ではない — 出発前に必ず公式サイト・電話で当日情報を確認すること。</b>
 </footer>
 </div>
 
@@ -978,7 +980,7 @@ function inRange(m,d,from,to){
   return a<=b ? (v>=a&&v<=b) : (v>=a||v<=b);
 }
 function phaseForToday(){
-  var now=new Date(), m=now.getMonth()+1, d=now.getDate();
+  var now=TODAY(), m=now.getMonth()+1, d=now.getDate();
   for(var i=1;i<PHASES.length;i++){ if(inRange(m,d,PHASES[i].from,PHASES[i].to)) return PHASES[i]; }
   return PHASES[0];
 }
@@ -1007,7 +1009,7 @@ function nextSeasonStart(from){
   return null;
 }
 function renderOpenState(){
-  var now=new Date();
+  var now=TODAY();
   var today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
   var el=document.getElementById('openstate');
   var wd=['日','月','火','水','木','金','土'];
@@ -1037,7 +1039,7 @@ function renderOpenState(){
 }
 function renderCal(){
   var wrap=document.getElementById('calwrap');
-  var now=new Date();
+  var now=TODAY();
   var tm=(now.getFullYear()===YEAR)?(now.getMonth()+1):0;
   var s=SEASONS[0];
   var months=[4,5,6,7,8,9,10,11];
@@ -1120,7 +1122,7 @@ if(qs.get('style')==='lure') state.style='lure';
 var forced=null;
 if(qp){ PHASES.forEach(function(p){ if(p.id===qp) forced=p; }); }
 state.phase=forced||phaseForToday();
-var now=new Date();
+var now=TODAY();
 var wd=['日','月','火','水','木','金','土'][now.getDay()];
 document.getElementById('todayline').textContent='— 今日は'+(now.getMonth()+1)+'月'+now.getDate()+'日('+wd+')。'+(forced?'表示中(手動選択): ':(now.getFullYear()===YEAR?'自動判定: ':YEAR+'年の時期区分を参考表示: '))+state.phase.name;
 renderOpenState();
